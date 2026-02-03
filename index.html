@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<!-- saved from url=(0234)file:///Users/jaromgordon/Library/Application%20Support/Claude/local-agent-mode-sessions/e40128cd-1427-4fd6-b655-5b22eb7be39d/58a2891d-3037-43f7-b69b-482f78f0a02a/local_276060e7-6087-40c1-93c0-7e48bb60aeb8/outputs/workout-tracker.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Workout">
+  <title>Workout Tracker</title>
+  <script src="./Workout Tracker_files/react.production.min.js"></script>
+  <script src="./Workout Tracker_files/react-dom.production.min.js"></script>
+  <script src="./Workout Tracker_files/babel.min.js"></script>
+  <script src="./Workout Tracker_files/saved_resource"></script>
+  <style>
+    * { -webkit-tap-highlight-color: transparent; }
+    body {
+      margin: 0;
+      background: #0f172a;
+      overscroll-behavior: none;
+    }
+    input { font-size: 16px !important; }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.sticky{position:sticky}.bottom-0{bottom:0px}.left-0{left:0px}.right-0{right:0px}.top-0{top:0px}.z-10{z-index:10}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mt-1{margin-top:0.25rem}.flex{display:flex}.grid{display:grid}.h-3{height:0.75rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-6{width:1.5rem}.w-8{width:2rem}.w-full{width:100%}.flex-1{flex:1 1 0%}.grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.grid-cols-\[auto_1fr_1fr\]{grid-template-columns:auto 1fr 1fr}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-t{border-top-width:1px}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/95{background-color:rgb(30 41 59 / 0.95)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/95{background-color:rgb(15 23 42 / 0.95)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(59 130 246 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-green-500{--tw-gradient-to:#22c55e var(--tw-gradient-to-position)}.p-4{padding:1rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-2{padding-bottom:0.5rem}.pb-24{padding-bottom:6rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.italic{font-style:italic}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.placeholder-slate-500::placeholder{--tw-placeholder-opacity:1;color:rgb(100 116 139 / var(--tw-placeholder-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}</style><script>"use strict";
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var _React = React,
+  useState = _React.useState,
+  useEffect = _React.useEffect;
+var workoutData = {
+  A1: {
+    name: "UPPER",
+    subtitle: "Chest / Back / Arms",
+    variant: "Incline Focus",
+    exercises: [{
+      id: 'a1-incline',
+      name: 'Incline DB Press',
+      sets: 3,
+      reps: '8-10',
+      rest: '90s',
+      note: 'Primary press variation',
+      tip: 'Set bench to 30-45°. Keep shoulder blades pinched back. Lower with control, press up explosively.'
+    }, {
+      id: 'a2',
+      name: 'Chest Supported Row',
+      sets: 3,
+      reps: '8-10 + 1 RP',
+      rest: '90s',
+      note: 'Rest-Pause on final set',
+      tip: 'Squeeze shoulder blades together at the top. On the last set, do your reps to failure, rest 10-15 seconds, then do more reps to failure (Rest-Pause).'
+    }, {
+      id: 'a3',
+      name: 'Lat Pulldown',
+      sets: 3,
+      reps: '10-12',
+      rest: '90s',
+      note: 'Focus on the stretch',
+      tip: 'Let the weight stretch your lats fully at the top. Pull elbows down toward your hips, not behind you.'
+    }, {
+      id: 'a4',
+      name: 'Pec Deck / Rear Delt',
+      sets: 4,
+      reps: '12-15',
+      rest: '60s',
+      note: 'SUPERSET (Same Machine)',
+      tip: 'Do pec deck immediately followed by rear delt fly with no rest between. Same machine, just turn around.'
+    }, {
+      id: 'a5',
+      name: 'Cable Curl / Pushdown',
+      sets: 3,
+      reps: '10-12',
+      rest: '60s',
+      note: 'SUPERSET (Same Station)',
+      tip: 'Curls then pushdowns back-to-back. Keep elbows fixed; only forearms should move.'
+    }, {
+      id: 'a6',
+      name: 'Overhead Extension',
+      sets: 3,
+      reps: '12-15',
+      rest: '60s',
+      note: 'Myoreps if over 45 min',
+      tip: 'Use rope or EZ bar. Keep elbows pointing forward. If short on time, use Myoreps technique.'
+    }]
+  },
+  A2: {
+    name: "UPPER",
+    subtitle: "Chest / Back / Arms",
+    variant: "Flat Focus",
+    exercises: [{
+      id: 'a1-flat',
+      name: 'Flat DB Press',
+      sets: 3,
+      reps: '8-10',
+      rest: '90s',
+      note: 'Primary press variation',
+      tip: 'Keep feet planted, slight arch in lower back. Lower dumbbells to chest level, press up in a slight arc.'
+    }, {
+      id: 'a2',
+      name: 'Chest Supported Row',
+      sets: 3,
+      reps: '8-10 + 1 RP',
+      rest: '90s',
+      note: 'Rest-Pause on final set',
+      tip: 'Squeeze shoulder blades together at the top. On the last set, do your reps to failure, rest 10-15 seconds, then do more reps to failure (Rest-Pause).'
+    }, {
+      id: 'a3',
+      name: 'Lat Pulldown',
+      sets: 3,
+      reps: '10-12',
+      rest: '90s',
+      note: 'Focus on the stretch',
+      tip: 'Let the weight stretch your lats fully at the top. Pull elbows down toward your hips, not behind you.'
+    }, {
+      id: 'a4',
+      name: 'Pec Deck / Rear Delt',
+      sets: 4,
+      reps: '12-15',
+      rest: '60s',
+      note: 'SUPERSET (Same Machine)',
+      tip: 'Do pec deck immediately followed by rear delt fly with no rest between. Same machine, just turn around.'
+    }, {
+      id: 'a5',
+      name: 'Cable Curl / Pushdown',
+      sets: 3,
+      reps: '10-12',
+      rest: '60s',
+      note: 'SUPERSET (Same Station)',
+      tip: 'Curls then pushdowns back-to-back. Keep elbows fixed; only forearms should move.'
+    }, {
+      id: 'a6',
+      name: 'Overhead Extension',
+      sets: 3,
+      reps: '12-15',
+      rest: '60s',
+      note: 'Myoreps if over 45 min',
+      tip: 'Use rope or EZ bar. Keep elbows pointing forward. If short on time, use Myoreps technique.'
+    }]
+  },
+  B1: {
+    name: "LOWER + SHOULDERS",
+    subtitle: "The V-Taper Finish",
+    variant: "Squat / Leg Curl",
+    exercises: [{
+      id: 'b1-squat',
+      name: 'Barbell Squat',
+      sets: 3,
+      reps: '6-8',
+      rest: '2 min',
+      note: 'Primary leg variation',
+      tip: 'Brace your core, break at hips and knees together. Go to parallel or below. Drive through whole foot.'
+    }, {
+      id: 'b2',
+      name: 'DB Lateral Raises',
+      sets: 4,
+      reps: '15-20',
+      rest: '60s',
+      note: 'High reps for pump & width',
+      tip: 'Slight bend in elbows, raise to shoulder height. Control the negative. Light weight, high reps for the burn.'
+    }, {
+      id: 'b3-curl',
+      name: 'Lying Leg Curl',
+      sets: 3,
+      reps: '10-12',
+      rest: '90s',
+      note: 'Secondary leg variation',
+      tip: 'Point toes away from you. Squeeze hamstrings hard at the top. Control the eccentric.'
+    }, {
+      id: 'b4',
+      name: 'Machine Shoulder Press',
+      sets: 3,
+      reps: '8-12',
+      rest: '90s',
+      note: 'Keep it heavy',
+      tip: 'Adjust seat so handles are at shoulder height. Press straight up, don\'t lock out elbows completely.'
+    }, {
+      id: 'b5',
+      name: 'Incline DB Curl',
+      sets: 3,
+      reps: '10-12',
+      rest: '60s',
+      note: 'Hits the long head well',
+      tip: 'Set bench to 45-60°. Let arms hang straight down. Curl without swinging; the incline targets the long head.'
+    }, {
+      id: 'b6',
+      name: 'Machine Calf Raise',
+      sets: 3,
+      reps: '15-20',
+      rest: '45s',
+      note: 'Fast-paced finisher',
+      tip: 'Full range of motion: stretch at the bottom, pause at the top. Keep the pace quick.'
+    }]
+  },
+  B2: {
+    name: "LOWER + SHOULDERS",
+    subtitle: "The V-Taper Finish",
+    variant: "RDL / Leg Press",
+    exercises: [{
+      id: 'b1-rdl',
+      name: 'Romanian Deadlift',
+      sets: 3,
+      reps: '6-8',
+      rest: '2 min',
+      note: 'Primary leg variation',
+      tip: 'Soft knee bend, hinge at hips pushing them back. Feel the hamstring stretch. Keep bar close to legs.'
+    }, {
+      id: 'b2',
+      name: 'DB Lateral Raises',
+      sets: 4,
+      reps: '15-20',
+      rest: '60s',
+      note: 'High reps for pump & width',
+      tip: 'Slight bend in elbows, raise to shoulder height. Control the negative. Light weight, high reps for the burn.'
+    }, {
+      id: 'b3-press',
+      name: 'Leg Press',
+      sets: 3,
+      reps: '10-12',
+      rest: '90s',
+      note: 'Secondary leg variation',
+      tip: 'Feet shoulder-width, middle of platform. Lower until knees are at 90°. Don\'t lock out at the top.'
+    }, {
+      id: 'b4',
+      name: 'Machine Shoulder Press',
+      sets: 3,
+      reps: '8-12',
+      rest: '90s',
+      note: 'Keep it heavy',
+      tip: 'Adjust seat so handles are at shoulder height. Press straight up, don\'t lock out elbows completely.'
+    }, {
+      id: 'b5',
+      name: 'Incline DB Curl',
+      sets: 3,
+      reps: '10-12',
+      rest: '60s',
+      note: 'Hits the long head well',
+      tip: 'Set bench to 45-60°. Let arms hang straight down. Curl without swinging; the incline targets the long head.'
+    }, {
+      id: 'b6',
+      name: 'Machine Calf Raise',
+      sets: 3,
+      reps: '15-20',
+      rest: '45s',
+      note: 'Fast-paced finisher',
+      tip: 'Full range of motion: stretch at the bottom, pause at the top. Keep the pace quick.'
+    }]
+  }
+};
+var workoutRotation = ['A1', 'B1', 'A2', 'B2'];
+var techniques = [{
+  name: 'Rest-Pause (RP)',
+  description: 'A technique to extend a set beyond failure. Perform reps until you can\'t do another with good form, rest 10-15 seconds (keep holding the weight or stay in position), then do as many more reps as possible.',
+  example: 'If you get 8 reps, rest 10-15 sec, then get 3 more reps, you did "8 + 1 RP" for 11 total reps.'
+}, {
+  name: 'Myoreps',
+  description: 'A time-efficient technique for isolation exercises. Do an activation set to near failure (12-15 reps), then take 3-5 deep breaths and do 3-5 more reps. Repeat until you can\'t get at least 3 reps.',
+  example: 'Overhead extension: 15 reps → breathe → 5 reps → breathe → 4 reps → breathe → 3 reps. Done in ~90 seconds.'
+}, {
+  name: 'Superset',
+  description: 'Two exercises performed back-to-back with no rest between them. Rest only after completing both exercises.',
+  example: 'Pec Deck (15 reps) → immediately → Rear Delt Fly (15 reps) → rest 60s → repeat.'
+}];
+var progressionTips = ['Add weight when you hit the top of the rep range for all sets', 'Increase by 5 lbs for upper body, 10 lbs for lower body', 'If you can\'t complete minimum reps, drop weight slightly', 'Your previous weights show in blue as a reference'];
+function SetInput(_ref) {
+  var exerciseId = _ref.exerciseId,
+    setIndex = _ref.setIndex,
+    value = _ref.value,
+    _onChange = _ref.onChange,
+    placeholder = _ref.placeholder,
+    previousValue = _ref.previousValue;
+  return /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    inputMode: "decimal",
+    value: value,
+    onChange: function onChange(e) {
+      return _onChange(exerciseId, setIndex, e.target.value);
+    },
+    placeholder: previousValue || placeholder,
+    className: "w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ".concat(previousValue && !value ? 'placeholder-blue-400' : 'placeholder-slate-500')
+  });
+}
+function ExerciseCard(_ref2) {
+  var exercise = _ref2.exercise,
+    logData = _ref2.logData,
+    onUpdateLog = _ref2.onUpdateLog,
+    previousData = _ref2.previousData,
+    onShowTip = _ref2.onShowTip;
+  var sets = Array.from({
+    length: exercise.sets
+  }, function (_, i) {
+    return i;
+  });
+  var isSetComplete = function isSetComplete(setIndex) {
+    var _logData$setIndex, _logData$setIndex2;
+    return (logData === null || logData === void 0 || (_logData$setIndex = logData[setIndex]) === null || _logData$setIndex === void 0 ? void 0 : _logData$setIndex.weight) && (logData === null || logData === void 0 || (_logData$setIndex2 = logData[setIndex]) === null || _logData$setIndex2 === void 0 ? void 0 : _logData$setIndex2.reps);
+  };
+  var completedSets = sets.filter(function (i) {
+    return isSetComplete(i);
+  }).length;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "bg-slate-800 rounded-xl p-4 mb-3 shadow-lg"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between items-start mb-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "text-lg font-semibold text-white"
+  }, exercise.name), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return onShowTip(exercise);
+    },
+    className: "w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full text-blue-400 text-xs"
+  }, "?")), /*#__PURE__*/React.createElement("p", {
+    className: "text-blue-400 text-sm"
+  }, exercise.sets, " \xD7 ", exercise.reps)), /*#__PURE__*/React.createElement("div", {
+    className: "text-right"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-xs text-slate-400"
+  }, "Rest: ", exercise.rest), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-xs px-2 py-1 rounded-full ".concat(completedSets === exercise.sets ? 'bg-green-600 text-white' : 'bg-slate-700 text-slate-300')
+  }, completedSets, "/", exercise.sets)))), exercise.note && /*#__PURE__*/React.createElement("p", {
+    className: "text-amber-400 text-xs mb-3 italic"
+  }, "\uD83D\uDCA1 ", exercise.note), previousData && Object.keys(previousData).length > 0 && /*#__PURE__*/React.createElement("p", {
+    className: "text-blue-400 text-xs mb-2"
+  }, "\uD83D\uDCCA Last time shown in blue"), /*#__PURE__*/React.createElement("div", {
+    className: "space-y-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-[auto_1fr_1fr] gap-2 text-xs text-slate-400 px-1"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "w-8"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-center"
+  }, "Weight"), /*#__PURE__*/React.createElement("span", {
+    className: "text-center"
+  }, "Reps")), sets.map(function (setIndex) {
+    var _logData$setIndex3, _previousData$setInde, _logData$setIndex4, _previousData$setInde2;
+    return /*#__PURE__*/React.createElement("div", {
+      key: setIndex,
+      className: "grid grid-cols-[auto_1fr_1fr] gap-2 items-center"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium ".concat(isSetComplete(setIndex) ? 'bg-green-600 text-white' : 'bg-slate-700 text-slate-300')
+    }, setIndex + 1), /*#__PURE__*/React.createElement(SetInput, {
+      exerciseId: exercise.id,
+      setIndex: setIndex,
+      value: (logData === null || logData === void 0 || (_logData$setIndex3 = logData[setIndex]) === null || _logData$setIndex3 === void 0 ? void 0 : _logData$setIndex3.weight) || '',
+      onChange: function onChange(id, idx, val) {
+        return onUpdateLog(id, idx, 'weight', val);
+      },
+      placeholder: "lbs",
+      previousValue: previousData === null || previousData === void 0 || (_previousData$setInde = previousData[setIndex]) === null || _previousData$setInde === void 0 ? void 0 : _previousData$setInde.weight
+    }), /*#__PURE__*/React.createElement(SetInput, {
+      exerciseId: exercise.id,
+      setIndex: setIndex,
+      value: (logData === null || logData === void 0 || (_logData$setIndex4 = logData[setIndex]) === null || _logData$setIndex4 === void 0 ? void 0 : _logData$setIndex4.reps) || '',
+      onChange: function onChange(id, idx, val) {
+        return onUpdateLog(id, idx, 'reps', val);
+      },
+      placeholder: "reps",
+      previousValue: previousData === null || previousData === void 0 || (_previousData$setInde2 = previousData[setIndex]) === null || _previousData$setInde2 === void 0 ? void 0 : _previousData$setInde2.reps
+    }));
+  })));
+}
+function Modal(_ref3) {
+  var isOpen = _ref3.isOpen,
+    onClose = _ref3.onClose,
+    title = _ref3.title,
+    children = _ref3.children;
+  if (!isOpen) return null;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fixed inset-0 z-50 flex items-end sm:items-center justify-center",
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "absolute inset-0 bg-black/80"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "relative bg-slate-800 w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[85vh] flex flex-col",
+    onClick: function onClick(e) {
+      return e.stopPropagation();
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex-shrink-0 p-4 border-b border-slate-700 flex justify-between items-center"
+  }, /*#__PURE__*/React.createElement("h2", {
+    className: "text-xl font-bold text-white"
+  }, title), /*#__PURE__*/React.createElement("button", {
+    onClick: onClose,
+    className: "w-10 h-10 flex items-center justify-center bg-slate-700 hover:bg-slate-600 rounded-full text-white text-2xl font-light"
+  }, "\xD7")), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 overflow-y-auto overscroll-contain p-4 -webkit-overflow-scrolling-touch"
+  }, children), /*#__PURE__*/React.createElement("div", {
+    className: "flex-shrink-0 p-4 border-t border-slate-700"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onClose,
+    className: "w-full py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-semibold"
+  }, "Close"))));
+}
+function TipModal(_ref4) {
+  var isOpen = _ref4.isOpen,
+    onClose = _ref4.onClose,
+    exercise = _ref4.exercise;
+  if (!exercise) return null;
+  return /*#__PURE__*/React.createElement(Modal, {
+    isOpen: isOpen,
+    onClose: onClose,
+    title: exercise.name
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-blue-400 text-sm mb-4"
+  }, exercise.sets, " \xD7 ", exercise.reps, " | Rest: ", exercise.rest), /*#__PURE__*/React.createElement("div", {
+    className: "bg-slate-700 rounded-lg p-4"
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "text-amber-400 text-sm font-medium mb-2"
+  }, "How to perform:"), /*#__PURE__*/React.createElement("p", {
+    className: "text-slate-300"
+  }, exercise.tip)));
+}
+function TechniquesModal(_ref5) {
+  var isOpen = _ref5.isOpen,
+    onClose = _ref5.onClose;
+  return /*#__PURE__*/React.createElement(Modal, {
+    isOpen: isOpen,
+    onClose: onClose,
+    title: "Training Techniques"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "space-y-4"
+  }, techniques.map(function (tech, idx) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: idx,
+      className: "bg-slate-700 rounded-xl p-4"
+    }, /*#__PURE__*/React.createElement("h3", {
+      className: "text-blue-400 font-semibold mb-2"
+    }, tech.name), /*#__PURE__*/React.createElement("p", {
+      className: "text-slate-300 text-sm mb-3"
+    }, tech.description), /*#__PURE__*/React.createElement("div", {
+      className: "bg-slate-600 rounded-lg p-3"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "text-amber-400 text-xs font-medium mb-1"
+    }, "Example:"), /*#__PURE__*/React.createElement("p", {
+      className: "text-slate-300 text-xs"
+    }, tech.example)));
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "bg-slate-700 rounded-xl p-4"
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "text-green-400 font-semibold mb-2"
+  }, "Progressive Overload Tips"), /*#__PURE__*/React.createElement("ul", {
+    className: "text-slate-300 text-sm space-y-2"
+  }, progressionTips.map(function (tip, idx) {
+    return /*#__PURE__*/React.createElement("li", {
+      key: idx
+    }, "\u2022 ", tip);
+  })))));
+}
+function HistoryModal(_ref6) {
+  var isOpen = _ref6.isOpen,
+    onClose = _ref6.onClose,
+    history = _ref6.history;
+  var formatDate = function formatDate(dateStr) {
+    return new Date(dateStr).toLocaleDateString('en-US', {
+      weekday: 'short',
+      month: 'short',
+      day: 'numeric'
+    });
+  };
+  return /*#__PURE__*/React.createElement(Modal, {
+    isOpen: isOpen,
+    onClose: onClose,
+    title: "Workout History"
+  }, history.length === 0 ? /*#__PURE__*/React.createElement("p", {
+    className: "text-slate-400 text-center py-8"
+  }, "No completed workouts yet. Get after it! \uD83D\uDCAA") : /*#__PURE__*/React.createElement("div", {
+    className: "space-y-3"
+  }, history.map(function (entry, idx) {
+    var _workoutData$entry$wo;
+    return /*#__PURE__*/React.createElement("div", {
+      key: idx,
+      className: "bg-slate-700 rounded-lg p-3"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-between items-center mb-1"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "text-white font-medium"
+    }, "Workout ", entry.workout), /*#__PURE__*/React.createElement("span", {
+      className: "text-slate-400 text-sm"
+    }, formatDate(entry.date))), /*#__PURE__*/React.createElement("p", {
+      className: "text-blue-400 text-xs mb-2"
+    }, (_workoutData$entry$wo = workoutData[entry.workout]) === null || _workoutData$entry$wo === void 0 ? void 0 : _workoutData$entry$wo.variant), /*#__PURE__*/React.createElement("div", {
+      className: "text-xs text-slate-400"
+    }, Object.entries(entry.exercises).map(function (_ref7) {
+      var _workoutData$entry$wo2;
+      var _ref8 = _slicedToArray(_ref7, 2),
+        exId = _ref8[0],
+        sets = _ref8[1];
+      var exercise = (_workoutData$entry$wo2 = workoutData[entry.workout]) === null || _workoutData$entry$wo2 === void 0 ? void 0 : _workoutData$entry$wo2.exercises.find(function (e) {
+        return e.id === exId;
+      });
+      var setEntries = Object.entries(sets).filter(function (_ref9) {
+        var _ref10 = _slicedToArray(_ref9, 2),
+          _ = _ref10[0],
+          s = _ref10[1];
+        return s.weight && s.reps;
+      });
+      if (setEntries.length === 0) return null;
+      return /*#__PURE__*/React.createElement("div", {
+        key: exId,
+        className: "py-1"
+      }, /*#__PURE__*/React.createElement("div", {
+        className: "flex justify-between"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "text-slate-300"
+      }, (exercise === null || exercise === void 0 ? void 0 : exercise.name) || exId), /*#__PURE__*/React.createElement("span", {
+        className: "text-green-400"
+      }, setEntries.length, " sets \u2713")), /*#__PURE__*/React.createElement("div", {
+        className: "text-slate-500"
+      }, setEntries.map(function (_ref11) {
+        var _ref12 = _slicedToArray(_ref11, 2),
+          _ = _ref12[0],
+          s = _ref12[1];
+        return "".concat(s.weight, "\xD7").concat(s.reps);
+      }).join(', ')));
+    })));
+  })));
+}
+function App() {
+  var _useState = useState('A1'),
+    _useState2 = _slicedToArray(_useState, 2),
+    currentWorkout = _useState2[0],
+    setCurrentWorkout = _useState2[1];
+  var _useState3 = useState({}),
+    _useState4 = _slicedToArray(_useState3, 2),
+    sessionLog = _useState4[0],
+    setSessionLog = _useState4[1];
+  var _useState5 = useState([]),
+    _useState6 = _slicedToArray(_useState5, 2),
+    history = _useState6[0],
+    setHistory = _useState6[1];
+  var _useState7 = useState(false),
+    _useState8 = _slicedToArray(_useState7, 2),
+    showHistory = _useState8[0],
+    setShowHistory = _useState8[1];
+  var _useState9 = useState(false),
+    _useState10 = _slicedToArray(_useState9, 2),
+    showTechniques = _useState10[0],
+    setShowTechniques = _useState10[1];
+  var _useState11 = useState(null),
+    _useState12 = _slicedToArray(_useState11, 2),
+    tipExercise = _useState12[0],
+    setTipExercise = _useState12[1];
+  useEffect(function () {
+    try {
+      var savedHistory = localStorage.getItem('workoutHistory_v2');
+      var savedSession = localStorage.getItem('currentSession_v2');
+      if (savedHistory) setHistory(JSON.parse(savedHistory));
+      if (savedSession) {
+        var session = JSON.parse(savedSession);
+        setSessionLog(session.log || {});
+        setCurrentWorkout(session.workout || 'A1');
+      }
+    } catch (e) {}
+  }, []);
+  useEffect(function () {
+    try {
+      localStorage.setItem('currentSession_v2', JSON.stringify({
+        workout: currentWorkout,
+        log: sessionLog
+      }));
+    } catch (e) {}
+  }, [sessionLog, currentWorkout]);
+  var getPreviousData = function getPreviousData(exerciseId) {
+    var _iterator = _createForOfIteratorHelper(history),
+      _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var entry = _step.value;
+        if (entry.exercises[exerciseId]) return entry.exercises[exerciseId];
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+    return null;
+  };
+  var handleUpdateLog = function handleUpdateLog(exerciseId, setIndex, field, value) {
+    setSessionLog(function (prev) {
+      var _prev$exerciseId;
+      return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, exerciseId, _objectSpread(_objectSpread({}, prev[exerciseId]), {}, _defineProperty({}, setIndex, _objectSpread(_objectSpread({}, (_prev$exerciseId = prev[exerciseId]) === null || _prev$exerciseId === void 0 ? void 0 : _prev$exerciseId[setIndex]), {}, _defineProperty({}, field, value))))));
+    });
+  };
+  var handleFinishWorkout = function handleFinishWorkout() {
+    if (Object.keys(sessionLog).length === 0) {
+      alert('Log at least one set before finishing!');
+      return;
+    }
+    var newEntry = {
+      date: new Date().toISOString(),
+      workout: currentWorkout,
+      exercises: sessionLog
+    };
+    var updatedHistory = [newEntry].concat(_toConsumableArray(history)).slice(0, 100);
+    setHistory(updatedHistory);
+    try {
+      localStorage.setItem('workoutHistory_v2', JSON.stringify(updatedHistory));
+    } catch (e) {}
+    setSessionLog({});
+    try {
+      localStorage.removeItem('currentSession_v2');
+    } catch (e) {}
+    var nextIndex = (workoutRotation.indexOf(currentWorkout) + 1) % workoutRotation.length;
+    var nextWorkout = workoutRotation[nextIndex];
+    setCurrentWorkout(nextWorkout);
+    alert("Workout ".concat(currentWorkout, " saved! \uD83D\uDCAA\nNext up: Workout ").concat(nextWorkout, " (").concat(workoutData[nextWorkout].variant, ")"));
+  };
+  var handleClearSession = function handleClearSession() {
+    if (confirm('Clear current workout log?')) setSessionLog({});
+  };
+  var workout = workoutData[currentWorkout];
+  var totalSets = workout.exercises.reduce(function (acc, ex) {
+    return acc + ex.sets;
+  }, 0);
+  var completedSets = workout.exercises.reduce(function (acc, ex) {
+    var exLog = sessionLog[ex.id] || {};
+    return acc + Object.values(exLog).filter(function (s) {
+      return s.weight && s.reps;
+    }).length;
+  }, 0);
+  var progress = Math.round(completedSets / totalSets * 100);
+  return /*#__PURE__*/React.createElement("div", {
+    className: "min-h-screen bg-slate-900 pb-24"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "sticky top-0 bg-slate-900/95 backdrop-blur z-10 px-4 pt-4 pb-2 safe-area-top"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between items-center mb-3"
+  }, /*#__PURE__*/React.createElement("h1", {
+    className: "text-2xl font-bold text-white"
+  }, "Workout Tracker"), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-3"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return setShowTechniques(true);
+    },
+    className: "text-amber-400 text-sm font-medium"
+  }, "Tips"), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return setShowHistory(true);
+    },
+    className: "text-blue-400 text-sm font-medium"
+  }, "History"))), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-4 gap-2 mb-3"
+  }, workoutRotation.map(function (w) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: w,
+      onClick: function onClick() {
+        return setCurrentWorkout(w);
+      },
+      className: "py-2 rounded-xl font-semibold transition-all ".concat(currentWorkout === w ? 'bg-blue-600 text-white shadow-lg' : 'bg-slate-800 text-slate-400')
+    }, w);
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "bg-slate-800 rounded-full h-3 overflow-hidden"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "bg-gradient-to-r from-blue-500 to-green-500 h-full transition-all duration-300",
+    style: {
+      width: "".concat(progress, "%")
+    }
+  })), /*#__PURE__*/React.createElement("p", {
+    className: "text-center text-slate-400 text-xs mt-1"
+  }, completedSets, " / ", totalSets, " sets")), /*#__PURE__*/React.createElement("div", {
+    className: "px-4 py-3"
+  }, /*#__PURE__*/React.createElement("h2", {
+    className: "text-xl font-bold text-white"
+  }, workout.name), /*#__PURE__*/React.createElement("p", {
+    className: "text-slate-400 text-sm"
+  }, workout.subtitle), /*#__PURE__*/React.createElement("p", {
+    className: "text-blue-400 text-xs mt-1"
+  }, workout.variant)), /*#__PURE__*/React.createElement("div", {
+    className: "px-4"
+  }, workout.exercises.map(function (exercise) {
+    return /*#__PURE__*/React.createElement(ExerciseCard, {
+      key: exercise.id,
+      exercise: exercise,
+      logData: sessionLog[exercise.id],
+      onUpdateLog: handleUpdateLog,
+      previousData: getPreviousData(exercise.id),
+      onShowTip: setTipExercise
+    });
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "fixed bottom-0 left-0 right-0 bg-slate-800/95 backdrop-blur border-t border-slate-700 p-4 flex gap-3 safe-area-bottom"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: handleClearSession,
+    className: "px-4 py-3 bg-slate-700 text-slate-300 rounded-xl font-medium"
+  }, "Clear"), /*#__PURE__*/React.createElement("button", {
+    onClick: handleFinishWorkout,
+    className: "flex-1 py-3 bg-green-600 text-white rounded-xl font-semibold shadow-lg"
+  }, "Finish Workout \u2713")), /*#__PURE__*/React.createElement(HistoryModal, {
+    isOpen: showHistory,
+    onClose: function onClose() {
+      return setShowHistory(false);
+    },
+    history: history
+  }), /*#__PURE__*/React.createElement(TechniquesModal, {
+    isOpen: showTechniques,
+    onClose: function onClose() {
+      return setShowTechniques(false);
+    }
+  }), /*#__PURE__*/React.createElement(TipModal, {
+    isOpen: !!tipExercise,
+    onClose: function onClose() {
+      return setTipExercise(null);
+    },
+    exercise: tipExercise
+  }));
+}
+ReactDOM.createRoot(document.getElementById('root')).render( /*#__PURE__*/React.createElement(App, null));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfUmVhY3QiLCJSZWFjdCIsInVzZVN0YXRlIiwidXNlRWZmZWN0Iiwid29ya291dERhdGEiLCJBMSIsIm5hbWUiLCJzdWJ0aXRsZSIsInZhcmlhbnQiLCJleGVyY2lzZXMiLCJpZCIsInNldHMiLCJyZXBzIiwicmVzdCIsIm5vdGUiLCJ0aXAiLCJBMiIsIkIxIiwiQjIiLCJ3b3Jrb3V0Um90YXRpb24iLCJ0ZWNobmlxdWVzIiwiZGVzY3JpcHRpb24iLCJleGFtcGxlIiwicHJvZ3Jlc3Npb25UaXBzIiwiU2V0SW5wdXQiLCJfcmVmIiwiZXhlcmNpc2VJZCIsInNldEluZGV4IiwidmFsdWUiLCJvbkNoYW5nZSIsInBsYWNlaG9sZGVyIiwicHJldmlvdXNWYWx1ZSIsImNyZWF0ZUVsZW1lbnQiLCJ0eXBlIiwiaW5wdXRNb2RlIiwiZSIsInRhcmdldCIsImNsYXNzTmFtZSIsImNvbmNhdCIsIkV4ZXJjaXNlQ2FyZCIsIl9yZWYyIiwiZXhlcmNpc2UiLCJsb2dEYXRhIiwib25VcGRhdGVMb2ciLCJwcmV2aW91c0RhdGEiLCJvblNob3dUaXAiLCJBcnJheSIsImZyb20iLCJsZW5ndGgiLCJfIiwiaSIsImlzU2V0Q29tcGxldGUiLCJfbG9nRGF0YSRzZXRJbmRleCIsIl9sb2dEYXRhJHNldEluZGV4MiIsIndlaWdodCIsImNvbXBsZXRlZFNldHMiLCJmaWx0ZXIiLCJvbkNsaWNrIiwiT2JqZWN0Iiwia2V5cyIsIm1hcCIsIl9sb2dEYXRhJHNldEluZGV4MyIsIl9wcmV2aW91c0RhdGEkc2V0SW5kZSIsIl9sb2dEYXRhJHNldEluZGV4NCIsIl9wcmV2aW91c0RhdGEkc2V0SW5kZTIiLCJrZXkiLCJpZHgiLCJ2YWwiLCJNb2RhbCIsIl9yZWYzIiwiaXNPcGVuIiwib25DbG9zZSIsInRpdGxlIiwiY2hpbGRyZW4iLCJzdG9wUHJvcGFnYXRpb24iLCJUaXBNb2RhbCIsIl9yZWY0IiwiVGVjaG5pcXVlc01vZGFsIiwiX3JlZjUiLCJ0ZWNoIiwiSGlzdG9yeU1vZGFsIiwiX3JlZjYiLCJoaXN0b3J5IiwiZm9ybWF0RGF0ZSIsImRhdGVTdHIiLCJEYXRlIiwidG9Mb2NhbGVEYXRlU3RyaW5nIiwid2Vla2RheSIsIm1vbnRoIiwiZGF5IiwiZW50cnkiLCJfd29ya291dERhdGEkZW50cnkkd28iLCJ3b3Jrb3V0IiwiZGF0ZSIsImVudHJpZXMiLCJfcmVmNyIsIl93b3Jrb3V0RGF0YSRlbnRyeSR3bzIiLCJfcmVmOCIsIl9zbGljZWRUb0FycmF5IiwiZXhJZCIsImZpbmQiLCJzZXRFbnRyaWVzIiwiX3JlZjkiLCJfcmVmMTAiLCJzIiwiX3JlZjExIiwiX3JlZjEyIiwiam9pbiIsIkFwcCIsIl91c2VTdGF0ZSIsIl91c2VTdGF0ZTIiLCJjdXJyZW50V29ya291dCIsInNldEN1cnJlbnRXb3Jrb3V0IiwiX3VzZVN0YXRlMyIsIl91c2VTdGF0ZTQiLCJzZXNzaW9uTG9nIiwic2V0U2Vzc2lvbkxvZyIsIl91c2VTdGF0ZTUiLCJfdXNlU3RhdGU2Iiwic2V0SGlzdG9yeSIsIl91c2VTdGF0ZTciLCJfdXNlU3RhdGU4Iiwic2hvd0hpc3RvcnkiLCJzZXRTaG93SGlzdG9yeSIsIl91c2VTdGF0ZTkiLCJfdXNlU3RhdGUxMCIsInNob3dUZWNobmlxdWVzIiwic2V0U2hvd1RlY2huaXF1ZXMiLCJfdXNlU3RhdGUxMSIsIl91c2VTdGF0ZTEyIiwidGlwRXhlcmNpc2UiLCJzZXRUaXBFeGVyY2lzZSIsInNhdmVkSGlzdG9yeSIsImxvY2FsU3RvcmFnZSIsImdldEl0ZW0iLCJzYXZlZFNlc3Npb24iLCJKU09OIiwicGFyc2UiLCJzZXNzaW9uIiwibG9nIiwic2V0SXRlbSIsInN0cmluZ2lmeSIsImdldFByZXZpb3VzRGF0YSIsIl9pdGVyYXRvciIsIl9jcmVhdGVGb3JPZkl0ZXJhdG9ySGVscGVyIiwiX3N0ZXAiLCJuIiwiZG9uZSIsImVyciIsImYiLCJoYW5kbGVVcGRhdGVMb2ciLCJmaWVsZCIsInByZXYiLCJfcHJldiRleGVyY2lzZUlkIiwiX29iamVjdFNwcmVhZCIsIl9kZWZpbmVQcm9wZXJ0eSIsImhhbmRsZUZpbmlzaFdvcmtvdXQiLCJhbGVydCIsIm5ld0VudHJ5IiwidG9JU09TdHJpbmciLCJ1cGRhdGVkSGlzdG9yeSIsIl90b0NvbnN1bWFibGVBcnJheSIsInNsaWNlIiwicmVtb3ZlSXRlbSIsIm5leHRJbmRleCIsImluZGV4T2YiLCJuZXh0V29ya291dCIsImhhbmRsZUNsZWFyU2Vzc2lvbiIsImNvbmZpcm0iLCJ0b3RhbFNldHMiLCJyZWR1Y2UiLCJhY2MiLCJleCIsImV4TG9nIiwidmFsdWVzIiwicHJvZ3Jlc3MiLCJNYXRoIiwicm91bmQiLCJ3Iiwic3R5bGUiLCJ3aWR0aCIsIlJlYWN0RE9NIiwiY3JlYXRlUm9vdCIsImRvY3VtZW50IiwiZ2V0RWxlbWVudEJ5SWQiLCJyZW5kZXIiXSwic291cmNlcyI6WyJJbmxpbmUgQmFiZWwgc2NyaXB0Il0sInNvdXJjZXNDb250ZW50IjpbIlxuICAgIGNvbnN0IHsgdXNlU3RhdGUsIHVzZUVmZmVjdCB9ID0gUmVhY3Q7XG5cbiAgICBjb25zdCB3b3Jrb3V0RGF0YSA9IHtcbiAgICAgIEExOiB7XG4gICAgICAgIG5hbWU6IFwiVVBQRVJcIixcbiAgICAgICAgc3VidGl0bGU6IFwiQ2hlc3QgLyBCYWNrIC8gQXJtc1wiLFxuICAgICAgICB2YXJpYW50OiBcIkluY2xpbmUgRm9jdXNcIixcbiAgICAgICAgZXhlcmNpc2VzOiBbXG4gICAgICAgICAgeyBpZDogJ2ExLWluY2xpbmUnLCBuYW1lOiAnSW5jbGluZSBEQiBQcmVzcycsIHNldHM6IDMsIHJlcHM6ICc4LTEwJywgcmVzdDogJzkwcycsIG5vdGU6ICdQcmltYXJ5IHByZXNzIHZhcmlhdGlvbicsIHRpcDogJ1NldCBiZW5jaCB0byAzMC00NcKwLiBLZWVwIHNob3VsZGVyIGJsYWRlcyBwaW5jaGVkIGJhY2suIExvd2VyIHdpdGggY29udHJvbCwgcHJlc3MgdXAgZXhwbG9zaXZlbHkuJyB9LFxuICAgICAgICAgIHsgaWQ6ICdhMicsIG5hbWU6ICdDaGVzdCBTdXBwb3J0ZWQgUm93Jywgc2V0czogMywgcmVwczogJzgtMTAgKyAxIFJQJywgcmVzdDogJzkwcycsIG5vdGU6ICdSZXN0LVBhdXNlIG9uIGZpbmFsIHNldCcsIHRpcDogJ1NxdWVlemUgc2hvdWxkZXIgYmxhZGVzIHRvZ2V0aGVyIGF0IHRoZSB0b3AuIE9uIHRoZSBsYXN0IHNldCwgZG8geW91ciByZXBzIHRvIGZhaWx1cmUsIHJlc3QgMTAtMTUgc2Vjb25kcywgdGhlbiBkbyBtb3JlIHJlcHMgdG8gZmFpbHVyZSAoUmVzdC1QYXVzZSkuJyB9LFxuICAgICAgICAgIHsgaWQ6ICdhMycsIG5hbWU6ICdMYXQgUHVsbGRvd24nLCBzZXRzOiAzLCByZXBzOiAnMTAtMTInLCByZXN0OiAnOTBzJywgbm90ZTogJ0ZvY3VzIG9uIHRoZSBzdHJldGNoJywgdGlwOiAnTGV0IHRoZSB3ZWlnaHQgc3RyZXRjaCB5b3VyIGxhdHMgZnVsbHkgYXQgdGhlIHRvcC4gUHVsbCBlbGJvd3MgZG93biB0b3dhcmQgeW91ciBoaXBzLCBub3QgYmVoaW5kIHlvdS4nIH0sXG4gICAgICAgICAgeyBpZDogJ2E0JywgbmFtZTogJ1BlYyBEZWNrIC8gUmVhciBEZWx0Jywgc2V0czogNCwgcmVwczogJzEyLTE1JywgcmVzdDogJzYwcycsIG5vdGU6ICdTVVBFUlNFVCAoU2FtZSBNYWNoaW5lKScsIHRpcDogJ0RvIHBlYyBkZWNrIGltbWVkaWF0ZWx5IGZvbGxvd2VkIGJ5IHJlYXIgZGVsdCBmbHkgd2l0aCBubyByZXN0IGJldHdlZW4uIFNhbWUgbWFjaGluZSwganVzdCB0dXJuIGFyb3VuZC4nIH0sXG4gICAgICAgICAgeyBpZDogJ2E1JywgbmFtZTogJ0NhYmxlIEN1cmwgLyBQdXNoZG93bicsIHNldHM6IDMsIHJlcHM6ICcxMC0xMicsIHJlc3Q6ICc2MHMnLCBub3RlOiAnU1VQRVJTRVQgKFNhbWUgU3RhdGlvbiknLCB0aXA6ICdDdXJscyB0aGVuIHB1c2hkb3ducyBiYWNrLXRvLWJhY2suIEtlZXAgZWxib3dzIGZpeGVkOyBvbmx5IGZvcmVhcm1zIHNob3VsZCBtb3ZlLicgfSxcbiAgICAgICAgICB7IGlkOiAnYTYnLCBuYW1lOiAnT3ZlcmhlYWQgRXh0ZW5zaW9uJywgc2V0czogMywgcmVwczogJzEyLTE1JywgcmVzdDogJzYwcycsIG5vdGU6ICdNeW9yZXBzIGlmIG92ZXIgNDUgbWluJywgdGlwOiAnVXNlIHJvcGUgb3IgRVogYmFyLiBLZWVwIGVsYm93cyBwb2ludGluZyBmb3J3YXJkLiBJZiBzaG9ydCBvbiB0aW1lLCB1c2UgTXlvcmVwcyB0ZWNobmlxdWUuJyB9LFxuICAgICAgICBdXG4gICAgICB9LFxuICAgICAgQTI6IHtcbiAgICAgICAgbmFtZTogXCJVUFBFUlwiLFxuICAgICAgICBzdWJ0aXRsZTogXCJDaGVzdCAvIEJhY2sgLyBBcm1zXCIsXG4gICAgICAgIHZhcmlhbnQ6IFwiRmxhdCBGb2N1c1wiLFxuICAgICAgICBleGVyY2lzZXM6IFtcbiAgICAgICAgICB7IGlkOiAnYTEtZmxhdCcsIG5hbWU6ICdGbGF0IERCIFByZXNzJywgc2V0czogMywgcmVwczogJzgtMTAnLCByZXN0OiAnOTBzJywgbm90ZTogJ1ByaW1hcnkgcHJlc3MgdmFyaWF0aW9uJywgdGlwOiAnS2VlcCBmZWV0IHBsYW50ZWQsIHNsaWdodCBhcmNoIGluIGxvd2VyIGJhY2suIExvd2VyIGR1bWJiZWxscyB0byBjaGVzdCBsZXZlbCwgcHJlc3MgdXAgaW4gYSBzbGlnaHQgYXJjLicgfSxcbiAgICAgICAgICB7IGlkOiAnYTInLCBuYW1lOiAnQ2hlc3QgU3VwcG9ydGVkIFJvdycsIHNldHM6IDMsIHJlcHM6ICc4LTEwICsgMSBSUCcsIHJlc3Q6ICc5MHMnLCBub3RlOiAnUmVzdC1QYXVzZSBvbiBmaW5hbCBzZXQnLCB0aXA6ICdTcXVlZXplIHNob3VsZGVyIGJsYWRlcyB0b2dldGhlciBhdCB0aGUgdG9wLiBPbiB0aGUgbGFzdCBzZXQsIGRvIHlvdXIgcmVwcyB0byBmYWlsdXJlLCByZXN0IDEwLTE1IHNlY29uZHMsIHRoZW4gZG8gbW9yZSByZXBzIHRvIGZhaWx1cmUgKFJlc3QtUGF1c2UpLicgfSxcbiAgICAgICAgICB7IGlkOiAnYTMnLCBuYW1lOiAnTGF0IFB1bGxkb3duJywgc2V0czogMywgcmVwczogJzEwLTEyJywgcmVzdDogJzkwcycsIG5vdGU6ICdGb2N1cyBvbiB0aGUgc3RyZXRjaCcsIHRpcDogJ0xldCB0aGUgd2VpZ2h0IHN0cmV0Y2ggeW91ciBsYXRzIGZ1bGx5IGF0IHRoZSB0b3AuIFB1bGwgZWxib3dzIGRvd24gdG93YXJkIHlvdXIgaGlwcywgbm90IGJlaGluZCB5b3UuJyB9LFxuICAgICAgICAgIHsgaWQ6ICdhNCcsIG5hbWU6ICdQZWMgRGVjayAvIFJlYXIgRGVsdCcsIHNldHM6IDQsIHJlcHM6ICcxMi0xNScsIHJlc3Q6ICc2MHMnLCBub3RlOiAnU1VQRVJTRVQgKFNhbWUgTWFjaGluZSknLCB0aXA6ICdEbyBwZWMgZGVjayBpbW1lZGlhdGVseSBmb2xsb3dlZCBieSByZWFyIGRlbHQgZmx5IHdpdGggbm8gcmVzdCBiZXR3ZWVuLiBTYW1lIG1hY2hpbmUsIGp1c3QgdHVybiBhcm91bmQuJyB9LFxuICAgICAgICAgIHsgaWQ6ICdhNScsIG5hbWU6ICdDYWJsZSBDdXJsIC8gUHVzaGRvd24nLCBzZXRzOiAzLCByZXBzOiAnMTAtMTInLCByZXN0OiAnNjBzJywgbm90ZTogJ1NVUEVSU0VUIChTYW1lIFN0YXRpb24pJywgdGlwOiAnQ3VybHMgdGhlbiBwdXNoZG93bnMgYmFjay10by1iYWNrLiBLZWVwIGVsYm93cyBmaXhlZDsgb25seSBmb3JlYXJtcyBzaG91bGQgbW92ZS4nIH0sXG4gICAgICAgICAgeyBpZDogJ2E2JywgbmFtZTogJ092ZXJoZWFkIEV4dGVuc2lvbicsIHNldHM6IDMsIHJlcHM6ICcxMi0xNScsIHJlc3Q6ICc2MHMnLCBub3RlOiAnTXlvcmVwcyBpZiBvdmVyIDQ1IG1pbicsIHRpcDogJ1VzZSByb3BlIG9yIEVaIGJhci4gS2VlcCBlbGJvd3MgcG9pbnRpbmcgZm9yd2FyZC4gSWYgc2hvcnQgb24gdGltZSwgdXNlIE15b3JlcHMgdGVjaG5pcXVlLicgfSxcbiAgICAgICAgXVxuICAgICAgfSxcbiAgICAgIEIxOiB7XG4gICAgICAgIG5hbWU6IFwiTE9XRVIgKyBTSE9VTERFUlNcIixcbiAgICAgICAgc3VidGl0bGU6IFwiVGhlIFYtVGFwZXIgRmluaXNoXCIsXG4gICAgICAgIHZhcmlhbnQ6IFwiU3F1YXQgLyBMZWcgQ3VybFwiLFxuICAgICAgICBleGVyY2lzZXM6IFtcbiAgICAgICAgICB7IGlkOiAnYjEtc3F1YXQnLCBuYW1lOiAnQmFyYmVsbCBTcXVhdCcsIHNldHM6IDMsIHJlcHM6ICc2LTgnLCByZXN0OiAnMiBtaW4nLCBub3RlOiAnUHJpbWFyeSBsZWcgdmFyaWF0aW9uJywgdGlwOiAnQnJhY2UgeW91ciBjb3JlLCBicmVhayBhdCBoaXBzIGFuZCBrbmVlcyB0b2dldGhlci4gR28gdG8gcGFyYWxsZWwgb3IgYmVsb3cuIERyaXZlIHRocm91Z2ggd2hvbGUgZm9vdC4nIH0sXG4gICAgICAgICAgeyBpZDogJ2IyJywgbmFtZTogJ0RCIExhdGVyYWwgUmFpc2VzJywgc2V0czogNCwgcmVwczogJzE1LTIwJywgcmVzdDogJzYwcycsIG5vdGU6ICdIaWdoIHJlcHMgZm9yIHB1bXAgJiB3aWR0aCcsIHRpcDogJ1NsaWdodCBiZW5kIGluIGVsYm93cywgcmFpc2UgdG8gc2hvdWxkZXIgaGVpZ2h0LiBDb250cm9sIHRoZSBuZWdhdGl2ZS4gTGlnaHQgd2VpZ2h0LCBoaWdoIHJlcHMgZm9yIHRoZSBidXJuLicgfSxcbiAgICAgICAgICB7IGlkOiAnYjMtY3VybCcsIG5hbWU6ICdMeWluZyBMZWcgQ3VybCcsIHNldHM6IDMsIHJlcHM6ICcxMC0xMicsIHJlc3Q6ICc5MHMnLCBub3RlOiAnU2Vjb25kYXJ5IGxlZyB2YXJpYXRpb24nLCB0aXA6ICdQb2ludCB0b2VzIGF3YXkgZnJvbSB5b3UuIFNxdWVlemUgaGFtc3RyaW5ncyBoYXJkIGF0IHRoZSB0b3AuIENvbnRyb2wgdGhlIGVjY2VudHJpYy4nIH0sXG4gICAgICAgICAgeyBpZDogJ2I0JywgbmFtZTogJ01hY2hpbmUgU2hvdWxkZXIgUHJlc3MnLCBzZXRzOiAzLCByZXBzOiAnOC0xMicsIHJlc3Q6ICc5MHMnLCBub3RlOiAnS2VlcCBpdCBoZWF2eScsIHRpcDogJ0FkanVzdCBzZWF0IHNvIGhhbmRsZXMgYXJlIGF0IHNob3VsZGVyIGhlaWdodC4gUHJlc3Mgc3RyYWlnaHQgdXAsIGRvblxcJ3QgbG9jayBvdXQgZWxib3dzIGNvbXBsZXRlbHkuJyB9LFxuICAgICAgICAgIHsgaWQ6ICdiNScsIG5hbWU6ICdJbmNsaW5lIERCIEN1cmwnLCBzZXRzOiAzLCByZXBzOiAnMTAtMTInLCByZXN0OiAnNjBzJywgbm90ZTogJ0hpdHMgdGhlIGxvbmcgaGVhZCB3ZWxsJywgdGlwOiAnU2V0IGJlbmNoIHRvIDQ1LTYwwrAuIExldCBhcm1zIGhhbmcgc3RyYWlnaHQgZG93bi4gQ3VybCB3aXRob3V0IHN3aW5naW5nOyB0aGUgaW5jbGluZSB0YXJnZXRzIHRoZSBsb25nIGhlYWQuJyB9LFxuICAgICAgICAgIHsgaWQ6ICdiNicsIG5hbWU6ICdNYWNoaW5lIENhbGYgUmFpc2UnLCBzZXRzOiAzLCByZXBzOiAnMTUtMjAnLCByZXN0OiAnNDVzJywgbm90ZTogJ0Zhc3QtcGFjZWQgZmluaXNoZXInLCB0aXA6ICdGdWxsIHJhbmdlIG9mIG1vdGlvbjogc3RyZXRjaCBhdCB0aGUgYm90dG9tLCBwYXVzZSBhdCB0aGUgdG9wLiBLZWVwIHRoZSBwYWNlIHF1aWNrLicgfSxcbiAgICAgICAgXVxuICAgICAgfSxcbiAgICAgIEIyOiB7XG4gICAgICAgIG5hbWU6IFwiTE9XRVIgKyBTSE9VTERFUlNcIixcbiAgICAgICAgc3VidGl0bGU6IFwiVGhlIFYtVGFwZXIgRmluaXNoXCIsXG4gICAgICAgIHZhcmlhbnQ6IFwiUkRMIC8gTGVnIFByZXNzXCIsXG4gICAgICAgIGV4ZXJjaXNlczogW1xuICAgICAgICAgIHsgaWQ6ICdiMS1yZGwnLCBuYW1lOiAnUm9tYW5pYW4gRGVhZGxpZnQnLCBzZXRzOiAzLCByZXBzOiAnNi04JywgcmVzdDogJzIgbWluJywgbm90ZTogJ1ByaW1hcnkgbGVnIHZhcmlhdGlvbicsIHRpcDogJ1NvZnQga25lZSBiZW5kLCBoaW5nZSBhdCBoaXBzIHB1c2hpbmcgdGhlbSBiYWNrLiBGZWVsIHRoZSBoYW1zdHJpbmcgc3RyZXRjaC4gS2VlcCBiYXIgY2xvc2UgdG8gbGVncy4nIH0sXG4gICAgICAgICAgeyBpZDogJ2IyJywgbmFtZTogJ0RCIExhdGVyYWwgUmFpc2VzJywgc2V0czogNCwgcmVwczogJzE1LTIwJywgcmVzdDogJzYwcycsIG5vdGU6ICdIaWdoIHJlcHMgZm9yIHB1bXAgJiB3aWR0aCcsIHRpcDogJ1NsaWdodCBiZW5kIGluIGVsYm93cywgcmFpc2UgdG8gc2hvdWxkZXIgaGVpZ2h0LiBDb250cm9sIHRoZSBuZWdhdGl2ZS4gTGlnaHQgd2VpZ2h0LCBoaWdoIHJlcHMgZm9yIHRoZSBidXJuLicgfSxcbiAgICAgICAgICB7IGlkOiAnYjMtcHJlc3MnLCBuYW1lOiAnTGVnIFByZXNzJywgc2V0czogMywgcmVwczogJzEwLTEyJywgcmVzdDogJzkwcycsIG5vdGU6ICdTZWNvbmRhcnkgbGVnIHZhcmlhdGlvbicsIHRpcDogJ0ZlZXQgc2hvdWxkZXItd2lkdGgsIG1pZGRsZSBvZiBwbGF0Zm9ybS4gTG93ZXIgdW50aWwga25lZXMgYXJlIGF0IDkwwrAuIERvblxcJ3QgbG9jayBvdXQgYXQgdGhlIHRvcC4nIH0sXG4gICAgICAgICAgeyBpZDogJ2I0JywgbmFtZTogJ01hY2hpbmUgU2hvdWxkZXIgUHJlc3MnLCBzZXRzOiAzLCByZXBzOiAnOC0xMicsIHJlc3Q6ICc5MHMnLCBub3RlOiAnS2VlcCBpdCBoZWF2eScsIHRpcDogJ0FkanVzdCBzZWF0IHNvIGhhbmRsZXMgYXJlIGF0IHNob3VsZGVyIGhlaWdodC4gUHJlc3Mgc3RyYWlnaHQgdXAsIGRvblxcJ3QgbG9jayBvdXQgZWxib3dzIGNvbXBsZXRlbHkuJyB9LFxuICAgICAgICAgIHsgaWQ6ICdiNScsIG5hbWU6ICdJbmNsaW5lIERCIEN1cmwnLCBzZXRzOiAzLCByZXBzOiAnMTAtMTInLCByZXN0OiAnNjBzJywgbm90ZTogJ0hpdHMgdGhlIGxvbmcgaGVhZCB3ZWxsJywgdGlwOiAnU2V0IGJlbmNoIHRvIDQ1LTYwwrAuIExldCBhcm1zIGhhbmcgc3RyYWlnaHQgZG93bi4gQ3VybCB3aXRob3V0IHN3aW5naW5nOyB0aGUgaW5jbGluZSB0YXJnZXRzIHRoZSBsb25nIGhlYWQuJyB9LFxuICAgICAgICAgIHsgaWQ6ICdiNicsIG5hbWU6ICdNYWNoaW5lIENhbGYgUmFpc2UnLCBzZXRzOiAzLCByZXBzOiAnMTUtMjAnLCByZXN0OiAnNDVzJywgbm90ZTogJ0Zhc3QtcGFjZWQgZmluaXNoZXInLCB0aXA6ICdGdWxsIHJhbmdlIG9mIG1vdGlvbjogc3RyZXRjaCBhdCB0aGUgYm90dG9tLCBwYXVzZSBhdCB0aGUgdG9wLiBLZWVwIHRoZSBwYWNlIHF1aWNrLicgfSxcbiAgICAgICAgXVxuICAgICAgfVxuICAgIH07XG5cbiAgICBjb25zdCB3b3Jrb3V0Um90YXRpb24gPSBbJ0ExJywgJ0IxJywgJ0EyJywgJ0IyJ107XG5cbiAgICBjb25zdCB0ZWNobmlxdWVzID0gW1xuICAgICAge1xuICAgICAgICBuYW1lOiAnUmVzdC1QYXVzZSAoUlApJyxcbiAgICAgICAgZGVzY3JpcHRpb246ICdBIHRlY2huaXF1ZSB0byBleHRlbmQgYSBzZXQgYmV5b25kIGZhaWx1cmUuIFBlcmZvcm0gcmVwcyB1bnRpbCB5b3UgY2FuXFwndCBkbyBhbm90aGVyIHdpdGggZ29vZCBmb3JtLCByZXN0IDEwLTE1IHNlY29uZHMgKGtlZXAgaG9sZGluZyB0aGUgd2VpZ2h0IG9yIHN0YXkgaW4gcG9zaXRpb24pLCB0aGVuIGRvIGFzIG1hbnkgbW9yZSByZXBzIGFzIHBvc3NpYmxlLicsXG4gICAgICAgIGV4YW1wbGU6ICdJZiB5b3UgZ2V0IDggcmVwcywgcmVzdCAxMC0xNSBzZWMsIHRoZW4gZ2V0IDMgbW9yZSByZXBzLCB5b3UgZGlkIFwiOCArIDEgUlBcIiBmb3IgMTEgdG90YWwgcmVwcy4nXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICBuYW1lOiAnTXlvcmVwcycsXG4gICAgICAgIGRlc2NyaXB0aW9uOiAnQSB0aW1lLWVmZmljaWVudCB0ZWNobmlxdWUgZm9yIGlzb2xhdGlvbiBleGVyY2lzZXMuIERvIGFuIGFjdGl2YXRpb24gc2V0IHRvIG5lYXIgZmFpbHVyZSAoMTItMTUgcmVwcyksIHRoZW4gdGFrZSAzLTUgZGVlcCBicmVhdGhzIGFuZCBkbyAzLTUgbW9yZSByZXBzLiBSZXBlYXQgdW50aWwgeW91IGNhblxcJ3QgZ2V0IGF0IGxlYXN0IDMgcmVwcy4nLFxuICAgICAgICBleGFtcGxlOiAnT3ZlcmhlYWQgZXh0ZW5zaW9uOiAxNSByZXBzIOKGkiBicmVhdGhlIOKGkiA1IHJlcHMg4oaSIGJyZWF0aGUg4oaSIDQgcmVwcyDihpIgYnJlYXRoZSDihpIgMyByZXBzLiBEb25lIGluIH45MCBzZWNvbmRzLidcbiAgICAgIH0sXG4gICAgICB7XG4gICAgICAgIG5hbWU6ICdTdXBlcnNldCcsXG4gICAgICAgIGRlc2NyaXB0aW9uOiAnVHdvIGV4ZXJjaXNlcyBwZXJmb3JtZWQgYmFjay10by1iYWNrIHdpdGggbm8gcmVzdCBiZXR3ZWVuIHRoZW0uIFJlc3Qgb25seSBhZnRlciBjb21wbGV0aW5nIGJvdGggZXhlcmNpc2VzLicsXG4gICAgICAgIGV4YW1wbGU6ICdQZWMgRGVjayAoMTUgcmVwcykg4oaSIGltbWVkaWF0ZWx5IOKGkiBSZWFyIERlbHQgRmx5ICgxNSByZXBzKSDihpIgcmVzdCA2MHMg4oaSIHJlcGVhdC4nXG4gICAgICB9XG4gICAgXTtcblxuICAgIGNvbnN0IHByb2dyZXNzaW9uVGlwcyA9IFtcbiAgICAgICdBZGQgd2VpZ2h0IHdoZW4geW91IGhpdCB0aGUgdG9wIG9mIHRoZSByZXAgcmFuZ2UgZm9yIGFsbCBzZXRzJyxcbiAgICAgICdJbmNyZWFzZSBieSA1IGxicyBmb3IgdXBwZXIgYm9keSwgMTAgbGJzIGZvciBsb3dlciBib2R5JyxcbiAgICAgICdJZiB5b3UgY2FuXFwndCBjb21wbGV0ZSBtaW5pbXVtIHJlcHMsIGRyb3Agd2VpZ2h0IHNsaWdodGx5JyxcbiAgICAgICdZb3VyIHByZXZpb3VzIHdlaWdodHMgc2hvdyBpbiBibHVlIGFzIGEgcmVmZXJlbmNlJ1xuICAgIF07XG5cbiAgICBmdW5jdGlvbiBTZXRJbnB1dCh7IGV4ZXJjaXNlSWQsIHNldEluZGV4LCB2YWx1ZSwgb25DaGFuZ2UsIHBsYWNlaG9sZGVyLCBwcmV2aW91c1ZhbHVlIH0pIHtcbiAgICAgIHJldHVybiAoXG4gICAgICAgIDxpbnB1dFxuICAgICAgICAgIHR5cGU9XCJ0ZXh0XCJcbiAgICAgICAgICBpbnB1dE1vZGU9XCJkZWNpbWFsXCJcbiAgICAgICAgICB2YWx1ZT17dmFsdWV9XG4gICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBvbkNoYW5nZShleGVyY2lzZUlkLCBzZXRJbmRleCwgZS50YXJnZXQudmFsdWUpfVxuICAgICAgICAgIHBsYWNlaG9sZGVyPXtwcmV2aW91c1ZhbHVlIHx8IHBsYWNlaG9sZGVyfVxuICAgICAgICAgIGNsYXNzTmFtZT17YHctZnVsbCBweC0yIHB5LTMgdGV4dC1jZW50ZXIgdGV4dC1iYXNlIGJnLXNsYXRlLTcwMCBib3JkZXIgYm9yZGVyLXNsYXRlLTYwMCByb3VuZGVkLWxnIHRleHQtd2hpdGUgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctMiBmb2N1czpyaW5nLWJsdWUtNTAwICR7cHJldmlvdXNWYWx1ZSAmJiAhdmFsdWUgPyAncGxhY2Vob2xkZXItYmx1ZS00MDAnIDogJ3BsYWNlaG9sZGVyLXNsYXRlLTUwMCd9YH1cbiAgICAgICAgLz5cbiAgICAgICk7XG4gICAgfVxuXG4gICAgZnVuY3Rpb24gRXhlcmNpc2VDYXJkKHsgZXhlcmNpc2UsIGxvZ0RhdGEsIG9uVXBkYXRlTG9nLCBwcmV2aW91c0RhdGEsIG9uU2hvd1RpcCB9KSB7XG4gICAgICBjb25zdCBzZXRzID0gQXJyYXkuZnJvbSh7IGxlbmd0aDogZXhlcmNpc2Uuc2V0cyB9LCAoXywgaSkgPT4gaSk7XG4gICAgICBjb25zdCBpc1NldENvbXBsZXRlID0gKHNldEluZGV4KSA9PiBsb2dEYXRhPy5bc2V0SW5kZXhdPy53ZWlnaHQgJiYgbG9nRGF0YT8uW3NldEluZGV4XT8ucmVwcztcbiAgICAgIGNvbnN0IGNvbXBsZXRlZFNldHMgPSBzZXRzLmZpbHRlcihpID0+IGlzU2V0Q29tcGxldGUoaSkpLmxlbmd0aDtcblxuICAgICAgcmV0dXJuIChcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiZy1zbGF0ZS04MDAgcm91bmRlZC14bCBwLTQgbWItMyBzaGFkb3ctbGdcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgganVzdGlmeS1iZXR3ZWVuIGl0ZW1zLXN0YXJ0IG1iLTJcIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC0xXCI+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTJcIj5cbiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LXNlbWlib2xkIHRleHQtd2hpdGVcIj57ZXhlcmNpc2UubmFtZX08L2gzPlxuICAgICAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4gb25TaG93VGlwKGV4ZXJjaXNlKX0gY2xhc3NOYW1lPVwidy02IGgtNiBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBiZy1zbGF0ZS03MDAgcm91bmRlZC1mdWxsIHRleHQtYmx1ZS00MDAgdGV4dC14c1wiPj88L2J1dHRvbj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtYmx1ZS00MDAgdGV4dC1zbVwiPntleGVyY2lzZS5zZXRzfSDDlyB7ZXhlcmNpc2UucmVwc308L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1yaWdodFwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtc2xhdGUtNDAwXCI+UmVzdDoge2V4ZXJjaXNlLnJlc3R9PC9zcGFuPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm10LTFcIj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9e2B0ZXh0LXhzIHB4LTIgcHktMSByb3VuZGVkLWZ1bGwgJHtjb21wbGV0ZWRTZXRzID09PSBleGVyY2lzZS5zZXRzID8gJ2JnLWdyZWVuLTYwMCB0ZXh0LXdoaXRlJyA6ICdiZy1zbGF0ZS03MDAgdGV4dC1zbGF0ZS0zMDAnfWB9PlxuICAgICAgICAgICAgICAgICAge2NvbXBsZXRlZFNldHN9L3tleGVyY2lzZS5zZXRzfVxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgIHtleGVyY2lzZS5ub3RlICYmIDxwIGNsYXNzTmFtZT1cInRleHQtYW1iZXItNDAwIHRleHQteHMgbWItMyBpdGFsaWNcIj7wn5KhIHtleGVyY2lzZS5ub3RlfTwvcD59XG4gICAgICAgICAge3ByZXZpb3VzRGF0YSAmJiBPYmplY3Qua2V5cyhwcmV2aW91c0RhdGEpLmxlbmd0aCA+IDAgJiYgPHAgY2xhc3NOYW1lPVwidGV4dC1ibHVlLTQwMCB0ZXh0LXhzIG1iLTJcIj7wn5OKIExhc3QgdGltZSBzaG93biBpbiBibHVlPC9wPn1cblxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS0yXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1jb2xzLVthdXRvXzFmcl8xZnJdIGdhcC0yIHRleHQteHMgdGV4dC1zbGF0ZS00MDAgcHgtMVwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ3LThcIj48L3NwYW4+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtY2VudGVyXCI+V2VpZ2h0PC9zcGFuPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlclwiPlJlcHM8L3NwYW4+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIHtzZXRzLm1hcCgoc2V0SW5kZXgpID0+IChcbiAgICAgICAgICAgICAgPGRpdiBrZXk9e3NldEluZGV4fSBjbGFzc05hbWU9XCJncmlkIGdyaWQtY29scy1bYXV0b18xZnJfMWZyXSBnYXAtMiBpdGVtcy1jZW50ZXJcIj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9e2B3LTggaC04IGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHJvdW5kZWQtZnVsbCB0ZXh0LXNtIGZvbnQtbWVkaXVtICR7aXNTZXRDb21wbGV0ZShzZXRJbmRleCkgPyAnYmctZ3JlZW4tNjAwIHRleHQtd2hpdGUnIDogJ2JnLXNsYXRlLTcwMCB0ZXh0LXNsYXRlLTMwMCd9YH0+XG4gICAgICAgICAgICAgICAgICB7c2V0SW5kZXggKyAxfVxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8U2V0SW5wdXQgZXhlcmNpc2VJZD17ZXhlcmNpc2UuaWR9IHNldEluZGV4PXtzZXRJbmRleH0gdmFsdWU9e2xvZ0RhdGE/LltzZXRJbmRleF0/LndlaWdodCB8fCAnJ30gb25DaGFuZ2U9eyhpZCwgaWR4LCB2YWwpID0+IG9uVXBkYXRlTG9nKGlkLCBpZHgsICd3ZWlnaHQnLCB2YWwpfSBwbGFjZWhvbGRlcj1cImxic1wiIHByZXZpb3VzVmFsdWU9e3ByZXZpb3VzRGF0YT8uW3NldEluZGV4XT8ud2VpZ2h0fSAvPlxuICAgICAgICAgICAgICAgIDxTZXRJbnB1dCBleGVyY2lzZUlkPXtleGVyY2lzZS5pZH0gc2V0SW5kZXg9e3NldEluZGV4fSB2YWx1ZT17bG9nRGF0YT8uW3NldEluZGV4XT8ucmVwcyB8fCAnJ30gb25DaGFuZ2U9eyhpZCwgaWR4LCB2YWwpID0+IG9uVXBkYXRlTG9nKGlkLCBpZHgsICdyZXBzJywgdmFsKX0gcGxhY2Vob2xkZXI9XCJyZXBzXCIgcHJldmlvdXNWYWx1ZT17cHJldmlvdXNEYXRhPy5bc2V0SW5kZXhdPy5yZXBzfSAvPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICkpfVxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgICk7XG4gICAgfVxuXG4gICAgZnVuY3Rpb24gTW9kYWwoeyBpc09wZW4sIG9uQ2xvc2UsIHRpdGxlLCBjaGlsZHJlbiB9KSB7XG4gICAgICBpZiAoIWlzT3BlbikgcmV0dXJuIG51bGw7XG4gICAgICByZXR1cm4gKFxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZpeGVkIGluc2V0LTAgei01MCBmbGV4IGl0ZW1zLWVuZCBzbTppdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXJcIiBvbkNsaWNrPXtvbkNsb3NlfT5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIGluc2V0LTAgYmctYmxhY2svODBcIiAvPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVsYXRpdmUgYmctc2xhdGUtODAwIHctZnVsbCBtYXgtdy1sZyByb3VuZGVkLXQtMnhsIHNtOnJvdW5kZWQtMnhsIG1heC1oLVs4NXZoXSBmbGV4IGZsZXgtY29sXCIgb25DbGljaz17ZSA9PiBlLnN0b3BQcm9wYWdhdGlvbigpfT5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC1zaHJpbmstMCBwLTQgYm9yZGVyLWIgYm9yZGVyLXNsYXRlLTcwMCBmbGV4IGp1c3RpZnktYmV0d2VlbiBpdGVtcy1jZW50ZXJcIj5cbiAgICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cInRleHQteGwgZm9udC1ib2xkIHRleHQtd2hpdGVcIj57dGl0bGV9PC9oMj5cbiAgICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXtvbkNsb3NlfSBjbGFzc05hbWU9XCJ3LTEwIGgtMTAgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgYmctc2xhdGUtNzAwIGhvdmVyOmJnLXNsYXRlLTYwMCByb3VuZGVkLWZ1bGwgdGV4dC13aGl0ZSB0ZXh0LTJ4bCBmb250LWxpZ2h0XCI+w5c8L2J1dHRvbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4LTEgb3ZlcmZsb3cteS1hdXRvIG92ZXJzY3JvbGwtY29udGFpbiBwLTQgLXdlYmtpdC1vdmVyZmxvdy1zY3JvbGxpbmctdG91Y2hcIj5cbiAgICAgICAgICAgICAge2NoaWxkcmVufVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgtc2hyaW5rLTAgcC00IGJvcmRlci10IGJvcmRlci1zbGF0ZS03MDBcIj5cbiAgICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXtvbkNsb3NlfSBjbGFzc05hbWU9XCJ3LWZ1bGwgcHktMyBiZy1ibHVlLTYwMCBob3ZlcjpiZy1ibHVlLTUwMCB0ZXh0LXdoaXRlIHJvdW5kZWQteGwgZm9udC1zZW1pYm9sZFwiPkNsb3NlPC9idXR0b24+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICApO1xuICAgIH1cblxuICAgIGZ1bmN0aW9uIFRpcE1vZGFsKHsgaXNPcGVuLCBvbkNsb3NlLCBleGVyY2lzZSB9KSB7XG4gICAgICBpZiAoIWV4ZXJjaXNlKSByZXR1cm4gbnVsbDtcbiAgICAgIHJldHVybiAoXG4gICAgICAgIDxNb2RhbCBpc09wZW49e2lzT3Blbn0gb25DbG9zZT17b25DbG9zZX0gdGl0bGU9e2V4ZXJjaXNlLm5hbWV9PlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtYmx1ZS00MDAgdGV4dC1zbSBtYi00XCI+e2V4ZXJjaXNlLnNldHN9IMOXIHtleGVyY2lzZS5yZXBzfSB8IFJlc3Q6IHtleGVyY2lzZS5yZXN0fTwvcD5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTcwMCByb3VuZGVkLWxnIHAtNFwiPlxuICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtYW1iZXItNDAwIHRleHQtc20gZm9udC1tZWRpdW0gbWItMlwiPkhvdyB0byBwZXJmb3JtOjwvaDM+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTMwMFwiPntleGVyY2lzZS50aXB9PC9wPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L01vZGFsPlxuICAgICAgKTtcbiAgICB9XG5cbiAgICBmdW5jdGlvbiBUZWNobmlxdWVzTW9kYWwoeyBpc09wZW4sIG9uQ2xvc2UgfSkge1xuICAgICAgcmV0dXJuIChcbiAgICAgICAgPE1vZGFsIGlzT3Blbj17aXNPcGVufSBvbkNsb3NlPXtvbkNsb3NlfSB0aXRsZT1cIlRyYWluaW5nIFRlY2huaXF1ZXNcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktNFwiPlxuICAgICAgICAgICAge3RlY2huaXF1ZXMubWFwKCh0ZWNoLCBpZHgpID0+IChcbiAgICAgICAgICAgICAgPGRpdiBrZXk9e2lkeH0gY2xhc3NOYW1lPVwiYmctc2xhdGUtNzAwIHJvdW5kZWQteGwgcC00XCI+XG4gICAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtYmx1ZS00MDAgZm9udC1zZW1pYm9sZCBtYi0yXCI+e3RlY2gubmFtZX08L2gzPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtMzAwIHRleHQtc20gbWItM1wiPnt0ZWNoLmRlc2NyaXB0aW9ufTwvcD5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTYwMCByb3VuZGVkLWxnIHAtM1wiPlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1hbWJlci00MDAgdGV4dC14cyBmb250LW1lZGl1bSBtYi0xXCI+RXhhbXBsZTo8L3A+XG4gICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTMwMCB0ZXh0LXhzXCI+e3RlY2guZXhhbXBsZX08L3A+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTcwMCByb3VuZGVkLXhsIHAtNFwiPlxuICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1ncmVlbi00MDAgZm9udC1zZW1pYm9sZCBtYi0yXCI+UHJvZ3Jlc3NpdmUgT3ZlcmxvYWQgVGlwczwvaDM+XG4gICAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTMwMCB0ZXh0LXNtIHNwYWNlLXktMlwiPlxuICAgICAgICAgICAgICAgIHtwcm9ncmVzc2lvblRpcHMubWFwKCh0aXAsIGlkeCkgPT4gPGxpIGtleT17aWR4fT7igKIge3RpcH08L2xpPil9XG4gICAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9Nb2RhbD5cbiAgICAgICk7XG4gICAgfVxuXG4gICAgZnVuY3Rpb24gSGlzdG9yeU1vZGFsKHsgaXNPcGVuLCBvbkNsb3NlLCBoaXN0b3J5IH0pIHtcbiAgICAgIGNvbnN0IGZvcm1hdERhdGUgPSAoZGF0ZVN0cikgPT4gbmV3IERhdGUoZGF0ZVN0cikudG9Mb2NhbGVEYXRlU3RyaW5nKCdlbi1VUycsIHsgd2Vla2RheTogJ3Nob3J0JywgbW9udGg6ICdzaG9ydCcsIGRheTogJ251bWVyaWMnIH0pO1xuICAgICAgcmV0dXJuIChcbiAgICAgICAgPE1vZGFsIGlzT3Blbj17aXNPcGVufSBvbkNsb3NlPXtvbkNsb3NlfSB0aXRsZT1cIldvcmtvdXQgSGlzdG9yeVwiPlxuICAgICAgICAgIHtoaXN0b3J5Lmxlbmd0aCA9PT0gMCA/IChcbiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtNDAwIHRleHQtY2VudGVyIHB5LThcIj5ObyBjb21wbGV0ZWQgd29ya291dHMgeWV0LiBHZXQgYWZ0ZXIgaXQhIPCfkqo8L3A+XG4gICAgICAgICAgKSA6IChcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS0zXCI+XG4gICAgICAgICAgICAgIHtoaXN0b3J5Lm1hcCgoZW50cnksIGlkeCkgPT4gKFxuICAgICAgICAgICAgICAgIDxkaXYga2V5PXtpZHh9IGNsYXNzTmFtZT1cImJnLXNsYXRlLTcwMCByb3VuZGVkLWxnIHAtM1wiPlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGp1c3RpZnktYmV0d2VlbiBpdGVtcy1jZW50ZXIgbWItMVwiPlxuICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXdoaXRlIGZvbnQtbWVkaXVtXCI+V29ya291dCB7ZW50cnkud29ya291dH08L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc2xhdGUtNDAwIHRleHQtc21cIj57Zm9ybWF0RGF0ZShlbnRyeS5kYXRlKX08L3NwYW4+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtYmx1ZS00MDAgdGV4dC14cyBtYi0yXCI+e3dvcmtvdXREYXRhW2VudHJ5LndvcmtvdXRdPy52YXJpYW50fTwvcD5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC14cyB0ZXh0LXNsYXRlLTQwMFwiPlxuICAgICAgICAgICAgICAgICAgICB7T2JqZWN0LmVudHJpZXMoZW50cnkuZXhlcmNpc2VzKS5tYXAoKFtleElkLCBzZXRzXSkgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IGV4ZXJjaXNlID0gd29ya291dERhdGFbZW50cnkud29ya291dF0/LmV4ZXJjaXNlcy5maW5kKGUgPT4gZS5pZCA9PT0gZXhJZCk7XG4gICAgICAgICAgICAgICAgICAgICAgY29uc3Qgc2V0RW50cmllcyA9IE9iamVjdC5lbnRyaWVzKHNldHMpLmZpbHRlcigoW18sIHNdKSA9PiBzLndlaWdodCAmJiBzLnJlcHMpO1xuICAgICAgICAgICAgICAgICAgICAgIGlmIChzZXRFbnRyaWVzLmxlbmd0aCA9PT0gMCkgcmV0dXJuIG51bGw7XG4gICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYga2V5PXtleElkfSBjbGFzc05hbWU9XCJweS0xXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBqdXN0aWZ5LWJldHdlZW5cIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTMwMFwiPntleGVyY2lzZT8ubmFtZSB8fCBleElkfTwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWdyZWVuLTQwMFwiPntzZXRFbnRyaWVzLmxlbmd0aH0gc2V0cyDinJM8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtc2xhdGUtNTAwXCI+e3NldEVudHJpZXMubWFwKChbXywgc10pID0+IGAke3Mud2VpZ2h0fcOXJHtzLnJlcHN9YCkuam9pbignLCAnKX08L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICk7XG4gICAgICAgICAgICAgICAgICAgIH0pfVxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgKX1cbiAgICAgICAgPC9Nb2RhbD5cbiAgICAgICk7XG4gICAgfVxuXG4gICAgZnVuY3Rpb24gQXBwKCkge1xuICAgICAgY29uc3QgW2N1cnJlbnRXb3Jrb3V0LCBzZXRDdXJyZW50V29ya291dF0gPSB1c2VTdGF0ZSgnQTEnKTtcbiAgICAgIGNvbnN0IFtzZXNzaW9uTG9nLCBzZXRTZXNzaW9uTG9nXSA9IHVzZVN0YXRlKHt9KTtcbiAgICAgIGNvbnN0IFtoaXN0b3J5LCBzZXRIaXN0b3J5XSA9IHVzZVN0YXRlKFtdKTtcbiAgICAgIGNvbnN0IFtzaG93SGlzdG9yeSwgc2V0U2hvd0hpc3RvcnldID0gdXNlU3RhdGUoZmFsc2UpO1xuICAgICAgY29uc3QgW3Nob3dUZWNobmlxdWVzLCBzZXRTaG93VGVjaG5pcXVlc10gPSB1c2VTdGF0ZShmYWxzZSk7XG4gICAgICBjb25zdCBbdGlwRXhlcmNpc2UsIHNldFRpcEV4ZXJjaXNlXSA9IHVzZVN0YXRlKG51bGwpO1xuXG4gICAgICB1c2VFZmZlY3QoKCkgPT4ge1xuICAgICAgICB0cnkge1xuICAgICAgICAgIGNvbnN0IHNhdmVkSGlzdG9yeSA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCd3b3Jrb3V0SGlzdG9yeV92MicpO1xuICAgICAgICAgIGNvbnN0IHNhdmVkU2Vzc2lvbiA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdjdXJyZW50U2Vzc2lvbl92MicpO1xuICAgICAgICAgIGlmIChzYXZlZEhpc3RvcnkpIHNldEhpc3RvcnkoSlNPTi5wYXJzZShzYXZlZEhpc3RvcnkpKTtcbiAgICAgICAgICBpZiAoc2F2ZWRTZXNzaW9uKSB7XG4gICAgICAgICAgICBjb25zdCBzZXNzaW9uID0gSlNPTi5wYXJzZShzYXZlZFNlc3Npb24pO1xuICAgICAgICAgICAgc2V0U2Vzc2lvbkxvZyhzZXNzaW9uLmxvZyB8fCB7fSk7XG4gICAgICAgICAgICBzZXRDdXJyZW50V29ya291dChzZXNzaW9uLndvcmtvdXQgfHwgJ0ExJyk7XG4gICAgICAgICAgfVxuICAgICAgICB9IGNhdGNoIChlKSB7fVxuICAgICAgfSwgW10pO1xuXG4gICAgICB1c2VFZmZlY3QoKCkgPT4ge1xuICAgICAgICB0cnkge1xuICAgICAgICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKCdjdXJyZW50U2Vzc2lvbl92MicsIEpTT04uc3RyaW5naWZ5KHsgd29ya291dDogY3VycmVudFdvcmtvdXQsIGxvZzogc2Vzc2lvbkxvZyB9KSk7XG4gICAgICAgIH0gY2F0Y2ggKGUpIHt9XG4gICAgICB9LCBbc2Vzc2lvbkxvZywgY3VycmVudFdvcmtvdXRdKTtcblxuICAgICAgY29uc3QgZ2V0UHJldmlvdXNEYXRhID0gKGV4ZXJjaXNlSWQpID0+IHtcbiAgICAgICAgZm9yIChjb25zdCBlbnRyeSBvZiBoaXN0b3J5KSB7XG4gICAgICAgICAgaWYgKGVudHJ5LmV4ZXJjaXNlc1tleGVyY2lzZUlkXSkgcmV0dXJuIGVudHJ5LmV4ZXJjaXNlc1tleGVyY2lzZUlkXTtcbiAgICAgICAgfVxuICAgICAgICByZXR1cm4gbnVsbDtcbiAgICAgIH07XG5cbiAgICAgIGNvbnN0IGhhbmRsZVVwZGF0ZUxvZyA9IChleGVyY2lzZUlkLCBzZXRJbmRleCwgZmllbGQsIHZhbHVlKSA9PiB7XG4gICAgICAgIHNldFNlc3Npb25Mb2cocHJldiA9PiAoe1xuICAgICAgICAgIC4uLnByZXYsXG4gICAgICAgICAgW2V4ZXJjaXNlSWRdOiB7IC4uLnByZXZbZXhlcmNpc2VJZF0sIFtzZXRJbmRleF06IHsgLi4ucHJldltleGVyY2lzZUlkXT8uW3NldEluZGV4XSwgW2ZpZWxkXTogdmFsdWUgfSB9XG4gICAgICAgIH0pKTtcbiAgICAgIH07XG5cbiAgICAgIGNvbnN0IGhhbmRsZUZpbmlzaFdvcmtvdXQgPSAoKSA9PiB7XG4gICAgICAgIGlmIChPYmplY3Qua2V5cyhzZXNzaW9uTG9nKS5sZW5ndGggPT09IDApIHtcbiAgICAgICAgICBhbGVydCgnTG9nIGF0IGxlYXN0IG9uZSBzZXQgYmVmb3JlIGZpbmlzaGluZyEnKTtcbiAgICAgICAgICByZXR1cm47XG4gICAgICAgIH1cbiAgICAgICAgY29uc3QgbmV3RW50cnkgPSB7IGRhdGU6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSwgd29ya291dDogY3VycmVudFdvcmtvdXQsIGV4ZXJjaXNlczogc2Vzc2lvbkxvZyB9O1xuICAgICAgICBjb25zdCB1cGRhdGVkSGlzdG9yeSA9IFtuZXdFbnRyeSwgLi4uaGlzdG9yeV0uc2xpY2UoMCwgMTAwKTtcbiAgICAgICAgc2V0SGlzdG9yeSh1cGRhdGVkSGlzdG9yeSk7XG4gICAgICAgIHRyeSB7IGxvY2FsU3RvcmFnZS5zZXRJdGVtKCd3b3Jrb3V0SGlzdG9yeV92MicsIEpTT04uc3RyaW5naWZ5KHVwZGF0ZWRIaXN0b3J5KSk7IH0gY2F0Y2ggKGUpIHt9XG4gICAgICAgIHNldFNlc3Npb25Mb2coe30pO1xuICAgICAgICB0cnkgeyBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnY3VycmVudFNlc3Npb25fdjInKTsgfSBjYXRjaCAoZSkge31cbiAgICAgICAgY29uc3QgbmV4dEluZGV4ID0gKHdvcmtvdXRSb3RhdGlvbi5pbmRleE9mKGN1cnJlbnRXb3Jrb3V0KSArIDEpICUgd29ya291dFJvdGF0aW9uLmxlbmd0aDtcbiAgICAgICAgY29uc3QgbmV4dFdvcmtvdXQgPSB3b3Jrb3V0Um90YXRpb25bbmV4dEluZGV4XTtcbiAgICAgICAgc2V0Q3VycmVudFdvcmtvdXQobmV4dFdvcmtvdXQpO1xuICAgICAgICBhbGVydChgV29ya291dCAke2N1cnJlbnRXb3Jrb3V0fSBzYXZlZCEg8J+Sqlxcbk5leHQgdXA6IFdvcmtvdXQgJHtuZXh0V29ya291dH0gKCR7d29ya291dERhdGFbbmV4dFdvcmtvdXRdLnZhcmlhbnR9KWApO1xuICAgICAgfTtcblxuICAgICAgY29uc3QgaGFuZGxlQ2xlYXJTZXNzaW9uID0gKCkgPT4ge1xuICAgICAgICBpZiAoY29uZmlybSgnQ2xlYXIgY3VycmVudCB3b3Jrb3V0IGxvZz8nKSkgc2V0U2Vzc2lvbkxvZyh7fSk7XG4gICAgICB9O1xuXG4gICAgICBjb25zdCB3b3Jrb3V0ID0gd29ya291dERhdGFbY3VycmVudFdvcmtvdXRdO1xuICAgICAgY29uc3QgdG90YWxTZXRzID0gd29ya291dC5leGVyY2lzZXMucmVkdWNlKChhY2MsIGV4KSA9PiBhY2MgKyBleC5zZXRzLCAwKTtcbiAgICAgIGNvbnN0IGNvbXBsZXRlZFNldHMgPSB3b3Jrb3V0LmV4ZXJjaXNlcy5yZWR1Y2UoKGFjYywgZXgpID0+IHtcbiAgICAgICAgY29uc3QgZXhMb2cgPSBzZXNzaW9uTG9nW2V4LmlkXSB8fCB7fTtcbiAgICAgICAgcmV0dXJuIGFjYyArIE9iamVjdC52YWx1ZXMoZXhMb2cpLmZpbHRlcihzID0+IHMud2VpZ2h0ICYmIHMucmVwcykubGVuZ3RoO1xuICAgICAgfSwgMCk7XG4gICAgICBjb25zdCBwcm9ncmVzcyA9IE1hdGgucm91bmQoKGNvbXBsZXRlZFNldHMgLyB0b3RhbFNldHMpICogMTAwKTtcblxuICAgICAgcmV0dXJuIChcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtaW4taC1zY3JlZW4gYmctc2xhdGUtOTAwIHBiLTI0XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGlja3kgdG9wLTAgYmctc2xhdGUtOTAwLzk1IGJhY2tkcm9wLWJsdXIgei0xMCBweC00IHB0LTQgcGItMiBzYWZlLWFyZWEtdG9wXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgganVzdGlmeS1iZXR3ZWVuIGl0ZW1zLWNlbnRlciBtYi0zXCI+XG4gICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJ0ZXh0LTJ4bCBmb250LWJvbGQgdGV4dC13aGl0ZVwiPldvcmtvdXQgVHJhY2tlcjwvaDE+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBnYXAtM1wiPlxuICAgICAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4gc2V0U2hvd1RlY2huaXF1ZXModHJ1ZSl9IGNsYXNzTmFtZT1cInRleHQtYW1iZXItNDAwIHRleHQtc20gZm9udC1tZWRpdW1cIj5UaXBzPC9idXR0b24+XG4gICAgICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiBzZXRTaG93SGlzdG9yeSh0cnVlKX0gY2xhc3NOYW1lPVwidGV4dC1ibHVlLTQwMCB0ZXh0LXNtIGZvbnQtbWVkaXVtXCI+SGlzdG9yeTwvYnV0dG9uPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdyaWQtY29scy00IGdhcC0yIG1iLTNcIj5cbiAgICAgICAgICAgICAge3dvcmtvdXRSb3RhdGlvbi5tYXAodyA9PiAoXG4gICAgICAgICAgICAgICAgPGJ1dHRvbiBrZXk9e3d9IG9uQ2xpY2s9eygpID0+IHNldEN1cnJlbnRXb3Jrb3V0KHcpfSBjbGFzc05hbWU9e2BweS0yIHJvdW5kZWQteGwgZm9udC1zZW1pYm9sZCB0cmFuc2l0aW9uLWFsbCAke2N1cnJlbnRXb3Jrb3V0ID09PSB3ID8gJ2JnLWJsdWUtNjAwIHRleHQtd2hpdGUgc2hhZG93LWxnJyA6ICdiZy1zbGF0ZS04MDAgdGV4dC1zbGF0ZS00MDAnfWB9PlxuICAgICAgICAgICAgICAgICAge3d9XG4gICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXNsYXRlLTgwMCByb3VuZGVkLWZ1bGwgaC0zIG92ZXJmbG93LWhpZGRlblwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLWdyYWRpZW50LXRvLXIgZnJvbS1ibHVlLTUwMCB0by1ncmVlbi01MDAgaC1mdWxsIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTMwMFwiIHN0eWxlPXt7IHdpZHRoOiBgJHtwcm9ncmVzc30lYCB9fSAvPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciB0ZXh0LXNsYXRlLTQwMCB0ZXh0LXhzIG10LTFcIj57Y29tcGxldGVkU2V0c30gLyB7dG90YWxTZXRzfSBzZXRzPC9wPlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJweC00IHB5LTNcIj5cbiAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJ0ZXh0LXhsIGZvbnQtYm9sZCB0ZXh0LXdoaXRlXCI+e3dvcmtvdXQubmFtZX08L2gyPlxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS00MDAgdGV4dC1zbVwiPnt3b3Jrb3V0LnN1YnRpdGxlfTwvcD5cbiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtYmx1ZS00MDAgdGV4dC14cyBtdC0xXCI+e3dvcmtvdXQudmFyaWFudH08L3A+XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB4LTRcIj5cbiAgICAgICAgICAgIHt3b3Jrb3V0LmV4ZXJjaXNlcy5tYXAoZXhlcmNpc2UgPT4gKFxuICAgICAgICAgICAgICA8RXhlcmNpc2VDYXJkIGtleT17ZXhlcmNpc2UuaWR9IGV4ZXJjaXNlPXtleGVyY2lzZX0gbG9nRGF0YT17c2Vzc2lvbkxvZ1tleGVyY2lzZS5pZF19IG9uVXBkYXRlTG9nPXtoYW5kbGVVcGRhdGVMb2d9IHByZXZpb3VzRGF0YT17Z2V0UHJldmlvdXNEYXRhKGV4ZXJjaXNlLmlkKX0gb25TaG93VGlwPXtzZXRUaXBFeGVyY2lzZX0gLz5cbiAgICAgICAgICAgICkpfVxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmaXhlZCBib3R0b20tMCBsZWZ0LTAgcmlnaHQtMCBiZy1zbGF0ZS04MDAvOTUgYmFja2Ryb3AtYmx1ciBib3JkZXItdCBib3JkZXItc2xhdGUtNzAwIHAtNCBmbGV4IGdhcC0zIHNhZmUtYXJlYS1ib3R0b21cIj5cbiAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17aGFuZGxlQ2xlYXJTZXNzaW9ufSBjbGFzc05hbWU9XCJweC00IHB5LTMgYmctc2xhdGUtNzAwIHRleHQtc2xhdGUtMzAwIHJvdW5kZWQteGwgZm9udC1tZWRpdW1cIj5DbGVhcjwvYnV0dG9uPlxuICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXtoYW5kbGVGaW5pc2hXb3Jrb3V0fSBjbGFzc05hbWU9XCJmbGV4LTEgcHktMyBiZy1ncmVlbi02MDAgdGV4dC13aGl0ZSByb3VuZGVkLXhsIGZvbnQtc2VtaWJvbGQgc2hhZG93LWxnXCI+RmluaXNoIFdvcmtvdXQg4pyTPC9idXR0b24+XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICA8SGlzdG9yeU1vZGFsIGlzT3Blbj17c2hvd0hpc3Rvcnl9IG9uQ2xvc2U9eygpID0+IHNldFNob3dIaXN0b3J5KGZhbHNlKX0gaGlzdG9yeT17aGlzdG9yeX0gLz5cbiAgICAgICAgICA8VGVjaG5pcXVlc01vZGFsIGlzT3Blbj17c2hvd1RlY2huaXF1ZXN9IG9uQ2xvc2U9eygpID0+IHNldFNob3dUZWNobmlxdWVzKGZhbHNlKX0gLz5cbiAgICAgICAgICA8VGlwTW9kYWwgaXNPcGVuPXshIXRpcEV4ZXJjaXNlfSBvbkNsb3NlPXsoKSA9PiBzZXRUaXBFeGVyY2lzZShudWxsKX0gZXhlcmNpc2U9e3RpcEV4ZXJjaXNlfSAvPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICk7XG4gICAgfVxuXG4gICAgUmVhY3RET00uY3JlYXRlUm9vdChkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncm9vdCcpKS5yZW5kZXIoPEFwcCAvPik7XG4gICJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUNJLElBQUFBLE1BQUEsR0FBZ0NDLEtBQUs7RUFBN0JDLFFBQVEsR0FBQUYsTUFBQSxDQUFSRSxRQUFRO0VBQUVDLFNBQVMsR0FBQUgsTUFBQSxDQUFURyxTQUFTO0FBRTNCLElBQU1DLFdBQVcsR0FBRztFQUNsQkMsRUFBRSxFQUFFO0lBQ0ZDLElBQUksRUFBRSxPQUFPO0lBQ2JDLFFBQVEsRUFBRSxxQkFB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</script></head>
+<body>
+  <div id="root"><div class="min-h-screen bg-slate-900 pb-24"><div class="sticky top-0 bg-slate-900/95 backdrop-blur z-10 px-4 pt-4 pb-2 safe-area-top"><div class="flex justify-between items-center mb-3"><h1 class="text-2xl font-bold text-white">Workout Tracker</h1><div class="flex gap-3"><button class="text-amber-400 text-sm font-medium">Tips</button><button class="text-blue-400 text-sm font-medium">History</button></div></div><div class="grid grid-cols-4 gap-2 mb-3"><button class="py-2 rounded-xl font-semibold transition-all bg-blue-600 text-white shadow-lg">A1</button><button class="py-2 rounded-xl font-semibold transition-all bg-slate-800 text-slate-400">B1</button><button class="py-2 rounded-xl font-semibold transition-all bg-slate-800 text-slate-400">A2</button><button class="py-2 rounded-xl font-semibold transition-all bg-slate-800 text-slate-400">B2</button></div><div class="bg-slate-800 rounded-full h-3 overflow-hidden"><div class="bg-gradient-to-r from-blue-500 to-green-500 h-full transition-all duration-300" style="width: 0%;"></div></div><p class="text-center text-slate-400 text-xs mt-1">0 / 19 sets</p></div><div class="px-4 py-3"><h2 class="text-xl font-bold text-white">UPPER</h2><p class="text-slate-400 text-sm">Chest / Back / Arms</p><p class="text-blue-400 text-xs mt-1">Incline Focus</p></div><div class="px-4"><div class="bg-slate-800 rounded-xl p-4 mb-3 shadow-lg"><div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="flex items-center gap-2"><h3 class="text-lg font-semibold text-white">Incline DB Press</h3><button class="w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full text-blue-400 text-xs">?</button></div><p class="text-blue-400 text-sm">3 × 8-10</p></div><div class="text-right"><span class="text-xs text-slate-400">Rest: 90s</span><div class="mt-1"><span class="text-xs px-2 py-1 rounded-full bg-slate-700 text-slate-300">0/3</span></div></div></div><p class="text-amber-400 text-xs mb-3 italic">💡 Primary press variation</p><div class="space-y-2"><div class="grid grid-cols-[auto_1fr_1fr] gap-2 text-xs text-slate-400 px-1"><span class="w-8"></span><span class="text-center">Weight</span><span class="text-center">Reps</span></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">1</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">2</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">3</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div></div></div><div class="bg-slate-800 rounded-xl p-4 mb-3 shadow-lg"><div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="flex items-center gap-2"><h3 class="text-lg font-semibold text-white">Chest Supported Row</h3><button class="w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full text-blue-400 text-xs">?</button></div><p class="text-blue-400 text-sm">3 × 8-10 + 1 RP</p></div><div class="text-right"><span class="text-xs text-slate-400">Rest: 90s</span><div class="mt-1"><span class="text-xs px-2 py-1 rounded-full bg-slate-700 text-slate-300">0/3</span></div></div></div><p class="text-amber-400 text-xs mb-3 italic">💡 Rest-Pause on final set</p><div class="space-y-2"><div class="grid grid-cols-[auto_1fr_1fr] gap-2 text-xs text-slate-400 px-1"><span class="w-8"></span><span class="text-center">Weight</span><span class="text-center">Reps</span></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">1</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">2</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">3</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div></div></div><div class="bg-slate-800 rounded-xl p-4 mb-3 shadow-lg"><div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="flex items-center gap-2"><h3 class="text-lg font-semibold text-white">Lat Pulldown</h3><button class="w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full text-blue-400 text-xs">?</button></div><p class="text-blue-400 text-sm">3 × 10-12</p></div><div class="text-right"><span class="text-xs text-slate-400">Rest: 90s</span><div class="mt-1"><span class="text-xs px-2 py-1 rounded-full bg-slate-700 text-slate-300">0/3</span></div></div></div><p class="text-amber-400 text-xs mb-3 italic">💡 Focus on the stretch</p><div class="space-y-2"><div class="grid grid-cols-[auto_1fr_1fr] gap-2 text-xs text-slate-400 px-1"><span class="w-8"></span><span class="text-center">Weight</span><span class="text-center">Reps</span></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">1</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">2</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">3</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div></div></div><div class="bg-slate-800 rounded-xl p-4 mb-3 shadow-lg"><div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="flex items-center gap-2"><h3 class="text-lg font-semibold text-white">Pec Deck / Rear Delt</h3><button class="w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full text-blue-400 text-xs">?</button></div><p class="text-blue-400 text-sm">4 × 12-15</p></div><div class="text-right"><span class="text-xs text-slate-400">Rest: 60s</span><div class="mt-1"><span class="text-xs px-2 py-1 rounded-full bg-slate-700 text-slate-300">0/4</span></div></div></div><p class="text-amber-400 text-xs mb-3 italic">💡 SUPERSET (Same Machine)</p><div class="space-y-2"><div class="grid grid-cols-[auto_1fr_1fr] gap-2 text-xs text-slate-400 px-1"><span class="w-8"></span><span class="text-center">Weight</span><span class="text-center">Reps</span></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">1</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">2</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">3</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">4</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div></div></div><div class="bg-slate-800 rounded-xl p-4 mb-3 shadow-lg"><div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="flex items-center gap-2"><h3 class="text-lg font-semibold text-white">Cable Curl / Pushdown</h3><button class="w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full text-blue-400 text-xs">?</button></div><p class="text-blue-400 text-sm">3 × 10-12</p></div><div class="text-right"><span class="text-xs text-slate-400">Rest: 60s</span><div class="mt-1"><span class="text-xs px-2 py-1 rounded-full bg-slate-700 text-slate-300">0/3</span></div></div></div><p class="text-amber-400 text-xs mb-3 italic">💡 SUPERSET (Same Station)</p><div class="space-y-2"><div class="grid grid-cols-[auto_1fr_1fr] gap-2 text-xs text-slate-400 px-1"><span class="w-8"></span><span class="text-center">Weight</span><span class="text-center">Reps</span></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">1</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">2</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">3</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div></div></div><div class="bg-slate-800 rounded-xl p-4 mb-3 shadow-lg"><div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="flex items-center gap-2"><h3 class="text-lg font-semibold text-white">Overhead Extension</h3><button class="w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full text-blue-400 text-xs">?</button></div><p class="text-blue-400 text-sm">3 × 12-15</p></div><div class="text-right"><span class="text-xs text-slate-400">Rest: 60s</span><div class="mt-1"><span class="text-xs px-2 py-1 rounded-full bg-slate-700 text-slate-300">0/3</span></div></div></div><p class="text-amber-400 text-xs mb-3 italic">💡 Myoreps if over 45 min</p><div class="space-y-2"><div class="grid grid-cols-[auto_1fr_1fr] gap-2 text-xs text-slate-400 px-1"><span class="w-8"></span><span class="text-center">Weight</span><span class="text-center">Reps</span></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">1</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">2</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div><div class="grid grid-cols-[auto_1fr_1fr] gap-2 items-center"><span class="w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium bg-slate-700 text-slate-300">3</span><input type="text" inputmode="decimal" placeholder="lbs" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""><input type="text" inputmode="decimal" placeholder="reps" class="w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-slate-500" value=""></div></div></div></div><div class="fixed bottom-0 left-0 right-0 bg-slate-800/95 backdrop-blur border-t border-slate-700 p-4 flex gap-3 safe-area-bottom"><button class="px-4 py-3 bg-slate-700 text-slate-300 rounded-xl font-medium">Clear</button><button class="flex-1 py-3 bg-green-600 text-white rounded-xl font-semibold shadow-lg">Finish Workout ✓</button></div></div></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const workoutData = {
+      A1: {
+        name: "UPPER",
+        subtitle: "Chest / Back / Arms",
+        variant: "Incline Focus",
+        exercises: [
+          { id: 'a1-incline', name: 'Incline DB Press', sets: 3, reps: '8-10', rest: '90s', note: 'Primary press variation', tip: 'Set bench to 30-45°. Keep shoulder blades pinched back. Lower with control, press up explosively.' },
+          { id: 'a2', name: 'Chest Supported Row', sets: 3, reps: '8-10 + 1 RP', rest: '90s', note: 'Rest-Pause on final set', tip: 'Squeeze shoulder blades together at the top. On the last set, do your reps to failure, rest 10-15 seconds, then do more reps to failure (Rest-Pause).' },
+          { id: 'a3', name: 'Lat Pulldown', sets: 3, reps: '10-12', rest: '90s', note: 'Focus on the stretch', tip: 'Let the weight stretch your lats fully at the top. Pull elbows down toward your hips, not behind you.' },
+          { id: 'a4', name: 'Pec Deck / Rear Delt', sets: 4, reps: '12-15', rest: '60s', note: 'SUPERSET (Same Machine)', tip: 'Do pec deck immediately followed by rear delt fly with no rest between. Same machine, just turn around.' },
+          { id: 'a5', name: 'Cable Curl / Pushdown', sets: 3, reps: '10-12', rest: '60s', note: 'SUPERSET (Same Station)', tip: 'Curls then pushdowns back-to-back. Keep elbows fixed; only forearms should move.' },
+          { id: 'a6', name: 'Overhead Extension', sets: 3, reps: '12-15', rest: '60s', note: 'Myoreps if over 45 min', tip: 'Use rope or EZ bar. Keep elbows pointing forward. If short on time, use Myoreps technique.' },
+        ]
+      },
+      A2: {
+        name: "UPPER",
+        subtitle: "Chest / Back / Arms",
+        variant: "Flat Focus",
+        exercises: [
+          { id: 'a1-flat', name: 'Flat DB Press', sets: 3, reps: '8-10', rest: '90s', note: 'Primary press variation', tip: 'Keep feet planted, slight arch in lower back. Lower dumbbells to chest level, press up in a slight arc.' },
+          { id: 'a2', name: 'Chest Supported Row', sets: 3, reps: '8-10 + 1 RP', rest: '90s', note: 'Rest-Pause on final set', tip: 'Squeeze shoulder blades together at the top. On the last set, do your reps to failure, rest 10-15 seconds, then do more reps to failure (Rest-Pause).' },
+          { id: 'a3', name: 'Lat Pulldown', sets: 3, reps: '10-12', rest: '90s', note: 'Focus on the stretch', tip: 'Let the weight stretch your lats fully at the top. Pull elbows down toward your hips, not behind you.' },
+          { id: 'a4', name: 'Pec Deck / Rear Delt', sets: 4, reps: '12-15', rest: '60s', note: 'SUPERSET (Same Machine)', tip: 'Do pec deck immediately followed by rear delt fly with no rest between. Same machine, just turn around.' },
+          { id: 'a5', name: 'Cable Curl / Pushdown', sets: 3, reps: '10-12', rest: '60s', note: 'SUPERSET (Same Station)', tip: 'Curls then pushdowns back-to-back. Keep elbows fixed; only forearms should move.' },
+          { id: 'a6', name: 'Overhead Extension', sets: 3, reps: '12-15', rest: '60s', note: 'Myoreps if over 45 min', tip: 'Use rope or EZ bar. Keep elbows pointing forward. If short on time, use Myoreps technique.' },
+        ]
+      },
+      B1: {
+        name: "LOWER + SHOULDERS",
+        subtitle: "The V-Taper Finish",
+        variant: "Squat / Leg Curl",
+        exercises: [
+          { id: 'b1-squat', name: 'Barbell Squat', sets: 3, reps: '6-8', rest: '2 min', note: 'Primary leg variation', tip: 'Brace your core, break at hips and knees together. Go to parallel or below. Drive through whole foot.' },
+          { id: 'b2', name: 'DB Lateral Raises', sets: 4, reps: '15-20', rest: '60s', note: 'High reps for pump & width', tip: 'Slight bend in elbows, raise to shoulder height. Control the negative. Light weight, high reps for the burn.' },
+          { id: 'b3-curl', name: 'Lying Leg Curl', sets: 3, reps: '10-12', rest: '90s', note: 'Secondary leg variation', tip: 'Point toes away from you. Squeeze hamstrings hard at the top. Control the eccentric.' },
+          { id: 'b4', name: 'Machine Shoulder Press', sets: 3, reps: '8-12', rest: '90s', note: 'Keep it heavy', tip: 'Adjust seat so handles are at shoulder height. Press straight up, don\'t lock out elbows completely.' },
+          { id: 'b5', name: 'Incline DB Curl', sets: 3, reps: '10-12', rest: '60s', note: 'Hits the long head well', tip: 'Set bench to 45-60°. Let arms hang straight down. Curl without swinging; the incline targets the long head.' },
+          { id: 'b6', name: 'Machine Calf Raise', sets: 3, reps: '15-20', rest: '45s', note: 'Fast-paced finisher', tip: 'Full range of motion: stretch at the bottom, pause at the top. Keep the pace quick.' },
+        ]
+      },
+      B2: {
+        name: "LOWER + SHOULDERS",
+        subtitle: "The V-Taper Finish",
+        variant: "RDL / Leg Press",
+        exercises: [
+          { id: 'b1-rdl', name: 'Romanian Deadlift', sets: 3, reps: '6-8', rest: '2 min', note: 'Primary leg variation', tip: 'Soft knee bend, hinge at hips pushing them back. Feel the hamstring stretch. Keep bar close to legs.' },
+          { id: 'b2', name: 'DB Lateral Raises', sets: 4, reps: '15-20', rest: '60s', note: 'High reps for pump & width', tip: 'Slight bend in elbows, raise to shoulder height. Control the negative. Light weight, high reps for the burn.' },
+          { id: 'b3-press', name: 'Leg Press', sets: 3, reps: '10-12', rest: '90s', note: 'Secondary leg variation', tip: 'Feet shoulder-width, middle of platform. Lower until knees are at 90°. Don\'t lock out at the top.' },
+          { id: 'b4', name: 'Machine Shoulder Press', sets: 3, reps: '8-12', rest: '90s', note: 'Keep it heavy', tip: 'Adjust seat so handles are at shoulder height. Press straight up, don\'t lock out elbows completely.' },
+          { id: 'b5', name: 'Incline DB Curl', sets: 3, reps: '10-12', rest: '60s', note: 'Hits the long head well', tip: 'Set bench to 45-60°. Let arms hang straight down. Curl without swinging; the incline targets the long head.' },
+          { id: 'b6', name: 'Machine Calf Raise', sets: 3, reps: '15-20', rest: '45s', note: 'Fast-paced finisher', tip: 'Full range of motion: stretch at the bottom, pause at the top. Keep the pace quick.' },
+        ]
+      }
+    };
+
+    const workoutRotation = ['A1', 'B1', 'A2', 'B2'];
+
+    const techniques = [
+      {
+        name: 'Rest-Pause (RP)',
+        description: 'A technique to extend a set beyond failure. Perform reps until you can\'t do another with good form, rest 10-15 seconds (keep holding the weight or stay in position), then do as many more reps as possible.',
+        example: 'If you get 8 reps, rest 10-15 sec, then get 3 more reps, you did "8 + 1 RP" for 11 total reps.'
+      },
+      {
+        name: 'Myoreps',
+        description: 'A time-efficient technique for isolation exercises. Do an activation set to near failure (12-15 reps), then take 3-5 deep breaths and do 3-5 more reps. Repeat until you can\'t get at least 3 reps.',
+        example: 'Overhead extension: 15 reps → breathe → 5 reps → breathe → 4 reps → breathe → 3 reps. Done in ~90 seconds.'
+      },
+      {
+        name: 'Superset',
+        description: 'Two exercises performed back-to-back with no rest between them. Rest only after completing both exercises.',
+        example: 'Pec Deck (15 reps) → immediately → Rear Delt Fly (15 reps) → rest 60s → repeat.'
+      }
+    ];
+
+    const progressionTips = [
+      'Add weight when you hit the top of the rep range for all sets',
+      'Increase by 5 lbs for upper body, 10 lbs for lower body',
+      'If you can\'t complete minimum reps, drop weight slightly',
+      'Your previous weights show in blue as a reference'
+    ];
+
+    function SetInput({ exerciseId, setIndex, value, onChange, placeholder, previousValue }) {
+      return (
+        <input
+          type="text"
+          inputMode="decimal"
+          value={value}
+          onChange={(e) => onChange(exerciseId, setIndex, e.target.value)}
+          placeholder={previousValue || placeholder}
+          className={`w-full px-2 py-3 text-center text-base bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${previousValue && !value ? 'placeholder-blue-400' : 'placeholder-slate-500'}`}
+        />
+      );
+    }
+
+    function ExerciseCard({ exercise, logData, onUpdateLog, previousData, onShowTip }) {
+      const sets = Array.from({ length: exercise.sets }, (_, i) => i);
+      const isSetComplete = (setIndex) => logData?.[setIndex]?.weight && logData?.[setIndex]?.reps;
+      const completedSets = sets.filter(i => isSetComplete(i)).length;
+
+      return (
+        <div className="bg-slate-800 rounded-xl p-4 mb-3 shadow-lg">
+          <div className="flex justify-between items-start mb-2">
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <h3 className="text-lg font-semibold text-white">{exercise.name}</h3>
+                <button onClick={() => onShowTip(exercise)} className="w-6 h-6 flex items-center justify-center bg-slate-700 rounded-full text-blue-400 text-xs">?</button>
+              </div>
+              <p className="text-blue-400 text-sm">{exercise.sets} × {exercise.reps}</p>
+            </div>
+            <div className="text-right">
+              <span className="text-xs text-slate-400">Rest: {exercise.rest}</span>
+              <div className="mt-1">
+                <span className={`text-xs px-2 py-1 rounded-full ${completedSets === exercise.sets ? 'bg-green-600 text-white' : 'bg-slate-700 text-slate-300'}`}>
+                  {completedSets}/{exercise.sets}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {exercise.note && <p className="text-amber-400 text-xs mb-3 italic">💡 {exercise.note}</p>}
+          {previousData && Object.keys(previousData).length > 0 && <p className="text-blue-400 text-xs mb-2">📊 Last time shown in blue</p>}
+
+          <div className="space-y-2">
+            <div className="grid grid-cols-[auto_1fr_1fr] gap-2 text-xs text-slate-400 px-1">
+              <span className="w-8"></span>
+              <span className="text-center">Weight</span>
+              <span className="text-center">Reps</span>
+            </div>
+            {sets.map((setIndex) => (
+              <div key={setIndex} className="grid grid-cols-[auto_1fr_1fr] gap-2 items-center">
+                <span className={`w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium ${isSetComplete(setIndex) ? 'bg-green-600 text-white' : 'bg-slate-700 text-slate-300'}`}>
+                  {setIndex + 1}
+                </span>
+                <SetInput exerciseId={exercise.id} setIndex={setIndex} value={logData?.[setIndex]?.weight || ''} onChange={(id, idx, val) => onUpdateLog(id, idx, 'weight', val)} placeholder="lbs" previousValue={previousData?.[setIndex]?.weight} />
+                <SetInput exerciseId={exercise.id} setIndex={setIndex} value={logData?.[setIndex]?.reps || ''} onChange={(id, idx, val) => onUpdateLog(id, idx, 'reps', val)} placeholder="reps" previousValue={previousData?.[setIndex]?.reps} />
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    function Modal({ isOpen, onClose, title, children }) {
+      if (!isOpen) return null;
+      return (
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center" onClick={onClose}>
+          <div className="absolute inset-0 bg-black/80" />
+          <div className="relative bg-slate-800 w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[85vh] flex flex-col" onClick={e => e.stopPropagation()}>
+            <div className="flex-shrink-0 p-4 border-b border-slate-700 flex justify-between items-center">
+              <h2 className="text-xl font-bold text-white">{title}</h2>
+              <button onClick={onClose} className="w-10 h-10 flex items-center justify-center bg-slate-700 hover:bg-slate-600 rounded-full text-white text-2xl font-light">×</button>
+            </div>
+            <div className="flex-1 overflow-y-auto overscroll-contain p-4 -webkit-overflow-scrolling-touch">
+              {children}
+            </div>
+            <div className="flex-shrink-0 p-4 border-t border-slate-700">
+              <button onClick={onClose} className="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-semibold">Close</button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function TipModal({ isOpen, onClose, exercise }) {
+      if (!exercise) return null;
+      return (
+        <Modal isOpen={isOpen} onClose={onClose} title={exercise.name}>
+          <p className="text-blue-400 text-sm mb-4">{exercise.sets} × {exercise.reps} | Rest: {exercise.rest}</p>
+          <div className="bg-slate-700 rounded-lg p-4">
+            <h3 className="text-amber-400 text-sm font-medium mb-2">How to perform:</h3>
+            <p className="text-slate-300">{exercise.tip}</p>
+          </div>
+        </Modal>
+      );
+    }
+
+    function TechniquesModal({ isOpen, onClose }) {
+      return (
+        <Modal isOpen={isOpen} onClose={onClose} title="Training Techniques">
+          <div className="space-y-4">
+            {techniques.map((tech, idx) => (
+              <div key={idx} className="bg-slate-700 rounded-xl p-4">
+                <h3 className="text-blue-400 font-semibold mb-2">{tech.name}</h3>
+                <p className="text-slate-300 text-sm mb-3">{tech.description}</p>
+                <div className="bg-slate-600 rounded-lg p-3">
+                  <p className="text-amber-400 text-xs font-medium mb-1">Example:</p>
+                  <p className="text-slate-300 text-xs">{tech.example}</p>
+                </div>
+              </div>
+            ))}
+            <div className="bg-slate-700 rounded-xl p-4">
+              <h3 className="text-green-400 font-semibold mb-2">Progressive Overload Tips</h3>
+              <ul className="text-slate-300 text-sm space-y-2">
+                {progressionTips.map((tip, idx) => <li key={idx}>• {tip}</li>)}
+              </ul>
+            </div>
+          </div>
+        </Modal>
+      );
+    }
+
+    function HistoryModal({ isOpen, onClose, history }) {
+      const formatDate = (dateStr) => new Date(dateStr).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+      return (
+        <Modal isOpen={isOpen} onClose={onClose} title="Workout History">
+          {history.length === 0 ? (
+            <p className="text-slate-400 text-center py-8">No completed workouts yet. Get after it! 💪</p>
+          ) : (
+            <div className="space-y-3">
+              {history.map((entry, idx) => (
+                <div key={idx} className="bg-slate-700 rounded-lg p-3">
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-white font-medium">Workout {entry.workout}</span>
+                    <span className="text-slate-400 text-sm">{formatDate(entry.date)}</span>
+                  </div>
+                  <p className="text-blue-400 text-xs mb-2">{workoutData[entry.workout]?.variant}</p>
+                  <div className="text-xs text-slate-400">
+                    {Object.entries(entry.exercises).map(([exId, sets]) => {
+                      const exercise = workoutData[entry.workout]?.exercises.find(e => e.id === exId);
+                      const setEntries = Object.entries(sets).filter(([_, s]) => s.weight && s.reps);
+                      if (setEntries.length === 0) return null;
+                      return (
+                        <div key={exId} className="py-1">
+                          <div className="flex justify-between">
+                            <span className="text-slate-300">{exercise?.name || exId}</span>
+                            <span className="text-green-400">{setEntries.length} sets ✓</span>
+                          </div>
+                          <div className="text-slate-500">{setEntries.map(([_, s]) => `${s.weight}×${s.reps}`).join(', ')}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </Modal>
+      );
+    }
+
+    function App() {
+      const [currentWorkout, setCurrentWorkout] = useState('A1');
+      const [sessionLog, setSessionLog] = useState({});
+      const [history, setHistory] = useState([]);
+      const [showHistory, setShowHistory] = useState(false);
+      const [showTechniques, setShowTechniques] = useState(false);
+      const [tipExercise, setTipExercise] = useState(null);
+
+      useEffect(() => {
+        try {
+          const savedHistory = localStorage.getItem('workoutHistory_v2');
+          const savedSession = localStorage.getItem('currentSession_v2');
+          if (savedHistory) setHistory(JSON.parse(savedHistory));
+          if (savedSession) {
+            const session = JSON.parse(savedSession);
+            setSessionLog(session.log || {});
+            setCurrentWorkout(session.workout || 'A1');
+          }
+        } catch (e) {}
+      }, []);
+
+      useEffect(() => {
+        try {
+          localStorage.setItem('currentSession_v2', JSON.stringify({ workout: currentWorkout, log: sessionLog }));
+        } catch (e) {}
+      }, [sessionLog, currentWorkout]);
+
+      const getPreviousData = (exerciseId) => {
+        for (const entry of history) {
+          if (entry.exercises[exerciseId]) return entry.exercises[exerciseId];
+        }
+        return null;
+      };
+
+      const handleUpdateLog = (exerciseId, setIndex, field, value) => {
+        setSessionLog(prev => ({
+          ...prev,
+          [exerciseId]: { ...prev[exerciseId], [setIndex]: { ...prev[exerciseId]?.[setIndex], [field]: value } }
+        }));
+      };
+
+      const handleFinishWorkout = () => {
+        if (Object.keys(sessionLog).length === 0) {
+          alert('Log at least one set before finishing!');
+          return;
+        }
+        const newEntry = { date: new Date().toISOString(), workout: currentWorkout, exercises: sessionLog };
+        const updatedHistory = [newEntry, ...history].slice(0, 100);
+        setHistory(updatedHistory);
+        try { localStorage.setItem('workoutHistory_v2', JSON.stringify(updatedHistory)); } catch (e) {}
+        setSessionLog({});
+        try { localStorage.removeItem('currentSession_v2'); } catch (e) {}
+        const nextIndex = (workoutRotation.indexOf(currentWorkout) + 1) % workoutRotation.length;
+        const nextWorkout = workoutRotation[nextIndex];
+        setCurrentWorkout(nextWorkout);
+        alert(`Workout ${currentWorkout} saved! 💪\nNext up: Workout ${nextWorkout} (${workoutData[nextWorkout].variant})`);
+      };
+
+      const handleClearSession = () => {
+        if (confirm('Clear current workout log?')) setSessionLog({});
+      };
+
+      const workout = workoutData[currentWorkout];
+      const totalSets = workout.exercises.reduce((acc, ex) => acc + ex.sets, 0);
+      const completedSets = workout.exercises.reduce((acc, ex) => {
+        const exLog = sessionLog[ex.id] || {};
+        return acc + Object.values(exLog).filter(s => s.weight && s.reps).length;
+      }, 0);
+      const progress = Math.round((completedSets / totalSets) * 100);
+
+      return (
+        <div className="min-h-screen bg-slate-900 pb-24">
+          <div className="sticky top-0 bg-slate-900/95 backdrop-blur z-10 px-4 pt-4 pb-2 safe-area-top">
+            <div className="flex justify-between items-center mb-3">
+              <h1 className="text-2xl font-bold text-white">Workout Tracker</h1>
+              <div className="flex gap-3">
+                <button onClick={() => setShowTechniques(true)} className="text-amber-400 text-sm font-medium">Tips</button>
+                <button onClick={() => setShowHistory(true)} className="text-blue-400 text-sm font-medium">History</button>
+              </div>
+            </div>
+            <div className="grid grid-cols-4 gap-2 mb-3">
+              {workoutRotation.map(w => (
+                <button key={w} onClick={() => setCurrentWorkout(w)} className={`py-2 rounded-xl font-semibold transition-all ${currentWorkout === w ? 'bg-blue-600 text-white shadow-lg' : 'bg-slate-800 text-slate-400'}`}>
+                  {w}
+                </button>
+              ))}
+            </div>
+            <div className="bg-slate-800 rounded-full h-3 overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-green-500 h-full transition-all duration-300" style={{ width: `${progress}%` }} />
+            </div>
+            <p className="text-center text-slate-400 text-xs mt-1">{completedSets} / {totalSets} sets</p>
+          </div>
+
+          <div className="px-4 py-3">
+            <h2 className="text-xl font-bold text-white">{workout.name}</h2>
+            <p className="text-slate-400 text-sm">{workout.subtitle}</p>
+            <p className="text-blue-400 text-xs mt-1">{workout.variant}</p>
+          </div>
+
+          <div className="px-4">
+            {workout.exercises.map(exercise => (
+              <ExerciseCard key={exercise.id} exercise={exercise} logData={sessionLog[exercise.id]} onUpdateLog={handleUpdateLog} previousData={getPreviousData(exercise.id)} onShowTip={setTipExercise} />
+            ))}
+          </div>
+
+          <div className="fixed bottom-0 left-0 right-0 bg-slate-800/95 backdrop-blur border-t border-slate-700 p-4 flex gap-3 safe-area-bottom">
+            <button onClick={handleClearSession} className="px-4 py-3 bg-slate-700 text-slate-300 rounded-xl font-medium">Clear</button>
+            <button onClick={handleFinishWorkout} className="flex-1 py-3 bg-green-600 text-white rounded-xl font-semibold shadow-lg">Finish Workout ✓</button>
+          </div>
+
+          <HistoryModal isOpen={showHistory} onClose={() => setShowHistory(false)} history={history} />
+          <TechniquesModal isOpen={showTechniques} onClose={() => setShowTechniques(false)} />
+          <TipModal isOpen={!!tipExercise} onClose={() => setTipExercise(null)} exercise={tipExercise} />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+
+
+</body></html>
