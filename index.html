@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Workout">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231e293b' width='100' height='100' rx='20'/><text y='65' x='50' text-anchor='middle' font-size='50'>💪</text></svg>">
+  <title>Workout Tracker</title>
+  <style>
+    * {
+      -webkit-tap-highlight-color: transparent;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: white;
+      min-height: 100vh;
+      padding-bottom: 100px;
+      overscroll-behavior: none;
+    }
+    
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 10;
+      padding: 16px;
+      padding-top: max(16px, env(safe-area-inset-top));
+    }
+    
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    
+    .header h1 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    
+    .header-buttons {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .header-btn {
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 8px 4px;
+    }
+    
+    .header-btn.tips { color: #fbbf24; }
+    .header-btn.history { color: #60a5fa; }
+    
+    /* Workout tabs */
+    .workout-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    
+    .workout-tab {
+      padding: 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 14px;
+    }
+    
+    .workout-tab.active {
+      background: #2563eb;
+      color: white;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    
+    .workout-tab:not(.active) {
+      background: #1e293b;
+      color: #94a3b8;
+    }
+    
+    /* Progress bar */
+    .progress-container {
+      background: #1e293b;
+      border-radius: 999px;
+      height: 12px;
+      overflow: hidden;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(to right, #3b82f6, #22c55e);
+      transition: width 0.3s;
+    }
+    
+    .progress-text {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    
+    /* Workout info */
+    .workout-info {
+      padding: 12px 16px;
+    }
+    
+    .workout-info h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    
+    .workout-info .subtitle {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+    
+    .workout-info .variant {
+      color: #60a5fa;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    
+    /* Exercise cards */
+    .exercises {
+      padding: 0 16px;
+    }
+    
+    .exercise-card {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .exercise-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    
+    .exercise-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .exercise-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .tip-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #334155;
+      border: none;
+      color: #60a5fa;
+      font-size: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .exercise-sets-reps {
+      color: #60a5fa;
+      font-size: 14px;
+    }
+    
+    .exercise-meta {
+      text-align: right;
+    }
+    
+    .exercise-rest {
+      color: #94a3b8;
+      font-size: 12px;
+    }
+    
+    .exercise-progress {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    
+    .exercise-progress.complete {
+      background: #16a34a;
+      color: white;
+    }
+    
+    .exercise-progress:not(.complete) {
+      background: #334155;
+      color: #cbd5e1;
+    }
+    
+    .exercise-note {
+      color: #fbbf24;
+      font-size: 12px;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    
+    .previous-note {
+      color: #60a5fa;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    
+    /* Set inputs */
+    .sets-header {
+      display: grid;
+      grid-template-columns: 32px 1fr 1fr;
+      gap: 8px;
+      color: #94a3b8;
+      font-size: 12px;
+      padding: 0 4px;
+      margin-bottom: 8px;
+    }
+    
+    .sets-header span:not(:first-child) {
+      text-align: center;
+    }
+    
+    .set-row {
+      display: grid;
+      grid-template-columns: 32px 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 8px;
+      align-items: center;
+    }
+    
+    .set-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .set-number.complete {
+      background: #16a34a;
+      color: white;
+    }
+    
+    .set-number:not(.complete) {
+      background: #334155;
+      color: #cbd5e1;
+    }
+    
+    .set-input {
+      width: 100%;
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 16px;
+      background: #334155;
+      border: 1px solid #475569;
+      border-radius: 8px;
+      color: white;
+      outline: none;
+    }
+    
+    .set-input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    }
+    
+    .set-input::placeholder {
+      color: #64748b;
+    }
+    
+    .set-input.has-previous::placeholder {
+      color: #60a5fa;
+    }
+    
+    /* Bottom bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(30, 41, 59, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-top: 1px solid #334155;
+      padding: 16px;
+      padding-bottom: max(16px, env(safe-area-inset-bottom));
+      display: flex;
+      gap: 12px;
+    }
+    
+    .clear-btn {
+      padding: 14px 20px;
+      background: #334155;
+      color: #cbd5e1;
+      border: none;
+      border-radius: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .finish-btn {
+      flex: 1;
+      padding: 14px;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+    }
+    
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 50;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+    }
+    
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal {
+      background: #1e293b;
+      width: 100%;
+      max-width: 500px;
+      max-height: 85vh;
+      border-radius: 16px 16px 0 0;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(100%);
+      transition: transform 0.3s;
+    }
+    
+    .modal-overlay.active .modal {
+      transform: translateY(0);
+    }
+    
+    .modal-header {
+      padding: 16px;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    
+    .modal-header h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    
+    .modal-close {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #334155;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-body {
+      padding: 16px;
+      overflow-y: auto;
+      flex: 1;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .modal-footer {
+      padding: 16px;
+      border-top: 1px solid #334155;
+      flex-shrink: 0;
+    }
+    
+    .modal-footer button {
+      width: 100%;
+      padding: 14px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    /* Modal content styles */
+    .tip-content {
+      background: #334155;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    
+    .tip-content h3 {
+      color: #fbbf24;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    
+    .tip-content p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+    
+    .tip-meta {
+      color: #60a5fa;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    
+    .technique-card {
+      background: #334155;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    
+    .technique-card h3 {
+      color: #60a5fa;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .technique-card p {
+      color: #cbd5e1;
+      font-size: 14px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    
+    .technique-example {
+      background: #475569;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    
+    .technique-example .label {
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    
+    .technique-example p {
+      margin: 0;
+      font-size: 12px;
+    }
+    
+    .progression-card {
+      background: #334155;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    
+    .progression-card h3 {
+      color: #22c55e;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .progression-card ul {
+      list-style: none;
+    }
+    
+    .progression-card li {
+      color: #cbd5e1;
+      font-size: 14px;
+      padding: 6px 0;
+    }
+    
+    .progression-card li::before {
+      content: "• ";
+    }
+    
+    .history-empty {
+      color: #94a3b8;
+      text-align: center;
+      padding: 32px;
+    }
+    
+    .history-entry {
+      background: #334155;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    
+    .history-workout {
+      color: white;
+      font-weight: 500;
+    }
+    
+    .history-date {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+    
+    .history-variant {
+      color: #60a5fa;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    
+    .history-exercise {
+      padding: 4px 0;
+    }
+    
+    .history-exercise-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .history-exercise-name {
+      color: #cbd5e1;
+      font-size: 12px;
+    }
+    
+    .history-exercise-sets {
+      color: #22c55e;
+      font-size: 12px;
+    }
+    
+    .history-exercise-data {
+      color: #64748b;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-top">
+      <h1>Workout Tracker</h1>
+      <div class="header-buttons">
+        <button class="header-btn tips" id="tipsBtn">Tips</button>
+        <button class="header-btn history" id="historyBtn">History</button>
+      </div>
+    </div>
+    <div class="workout-tabs" id="workoutTabs"></div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <p class="progress-text" id="progressText">0 / 0 sets</p>
+  </div>
+  
+  <div class="workout-info" id="workoutInfo"></div>
+  <div class="exercises" id="exercisesList"></div>
+  
+  <div class="bottom-bar">
+    <button class="clear-btn" id="clearBtn">Clear</button>
+    <button class="finish-btn" id="finishBtn">Finish Workout ✓</button>
+  </div>
+  
+  <!-- Tip Modal -->
+  <div class="modal-overlay" id="tipModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="tipModalTitle">Exercise</h2>
+        <button class="modal-close" id="tipModalClose">×</button>
+      </div>
+      <div class="modal-body" id="tipModalBody"></div>
+      <div class="modal-footer">
+        <button id="tipModalCloseBtn">Close</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Techniques Modal -->
+  <div class="modal-overlay" id="techniquesModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Training Techniques</h2>
+        <button class="modal-close" id="techniquesModalClose">×</button>
+      </div>
+      <div class="modal-body" id="techniquesModalBody"></div>
+      <div class="modal-footer">
+        <button id="techniquesModalCloseBtn">Close</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- History Modal -->
+  <div class="modal-overlay" id="historyModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Workout History</h2>
+        <button class="modal-close" id="historyModalClose">×</button>
+      </div>
+      <div class="modal-body" id="historyModalBody"></div>
+      <div class="modal-footer">
+        <button id="historyModalCloseBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Data
+    const workoutData = {
+      A: {
+        name: "UPPER",
+        subtitle: "Chest / Back / Arms",
+        variant: "Push / Pull / Arms",
+        exercises: [
+          { id: 'a1-incline', name: 'Incline DB Press', sets: 3, reps: '8-10', rest: '90s', note: 'Primary press variation', tip: 'Setup: Set bench to 30-45°. Grab dumbbells and sit back, using your knees to help kick them up to shoulder level. Plant feet flat on floor.\n\nExecution: Keep shoulder blades pinched back and down throughout. Lower the dumbbells with control until they reach chest level, elbows at roughly 45° from your torso. Press up explosively in a slight arc, bringing the dumbbells together at the top without clanking them.\n\nKey cues: Maintain tension in your chest throughout. Don\'t let your lower back over-arch. Breathe in on the way down, exhale as you press.' },
+          { id: 'a2', name: 'Chest Supported Row', sets: 3, reps: '8-10 + 1 RP', rest: '90s', note: 'Rest-Pause on final set', tip: 'Setup: Set an incline bench to about 30-45°. Lie face down with your chest against the pad, feet on the floor for stability. Let your arms hang straight down holding dumbbells or grab the handles if using a machine.\n\nExecution: Pull your elbows back, squeezing your shoulder blades together at the top. Hold the contraction for a full second. Lower with control, letting your shoulders stretch forward at the bottom.\n\nRest-Pause: On your final set, do reps until failure, rest 10-15 seconds while staying in position, then do as many more reps as possible.\n\nKey cues: Keep your chest pressed into the pad—don\'t lift up. Think about pulling with your elbows, not your hands.' },
+          { id: 'a3', name: 'Lat Pulldown', sets: 3, reps: '10-12', rest: '90s', note: 'Focus on the stretch', tip: 'Setup: Adjust the thigh pad so you\'re locked in securely. Grip the bar slightly wider than shoulder-width with palms facing away. Start with arms fully extended overhead.\n\nExecution: Lean back slightly (about 15°). Pull the bar down toward your upper chest, driving your elbows down and back toward your hips. Squeeze your lats hard at the bottom. Let the bar rise slowly, allowing a full stretch at the top—feel your lats lengthen completely before the next rep.\n\nKey cues: Don\'t pull behind your neck. Avoid using momentum or leaning way back. Keep your chest up throughout.' },
+          { id: 'a4-pec', name: 'Pec Deck', sets: 3, reps: '12-15', rest: '0s', note: 'SUPERSET with Rear Delt Fly', tip: 'Setup: Adjust the seat so the handles are at chest height. Sit with your back flat against the pad. Grip the handles with elbows slightly bent.\n\nExecution: Bring the handles together in front of your chest in a hugging motion, squeezing your pecs hard at the center. Hold the contraction for a second. Return slowly, letting your chest stretch at the bottom—don\'t let the weight stack touch down.\n\nKey cues: Keep a slight bend in your elbows throughout. Don\'t let your shoulders roll forward. Focus on squeezing your chest, not pushing with your arms.\n\nSuperset: Immediately move to rear delt fly—same machine, just turn around.' },
+          { id: 'a4-rear', name: 'Rear Delt Fly', sets: 3, reps: '12-15', rest: '60s', note: 'SUPERSET with Pec Deck', tip: 'Setup: Turn around on the pec deck machine. Adjust handles to the rear delt position. Sit facing the pad, chest against it, and grip the handles with arms extended in front.\n\nExecution: With a slight bend in your elbows, pull the handles back in a wide arc, squeezing your rear delts and upper back at the end. Hold the contraction briefly. Return with control.\n\nKey cues: Don\'t use momentum—this is a controlled, isolation movement. Keep your chest pressed against the pad. Think about leading with your elbows, not your hands.\n\nRest 60 seconds, then repeat the superset.' },
+          { id: 'a5-curl', name: 'Cable Curl', sets: 3, reps: '10-12', rest: '0s', note: 'SUPERSET with Pushdown', tip: 'Setup: Attach a straight bar or EZ bar to a low cable pulley. Stand facing the machine, feet shoulder-width apart. Grip the bar with palms facing up, arms fully extended.\n\nExecution: Keeping your elbows pinned to your sides, curl the bar up toward your shoulders. Squeeze your biceps hard at the top. Lower with control, fully extending your arms at the bottom.\n\nKey cues: Don\'t swing or use your back. Keep your wrists straight. Your upper arms should stay completely stationary—only your forearms move.\n\nSuperset: Immediately switch to pushdowns on the same cable stack.' },
+          { id: 'a5-push', name: 'Cable Pushdown', sets: 3, reps: '10-12', rest: '60s', note: 'SUPERSET with Cable Curl', tip: 'Setup: Attach a straight bar or rope to the high pulley. Stand facing the machine, feet shoulder-width apart. Grip the attachment with palms facing down, elbows tucked at your sides.\n\nExecution: Keeping your elbows pinned to your sides, push the bar down until your arms are fully extended. Squeeze your triceps hard at the bottom. Let the bar rise with control, stopping when your forearms are parallel to the floor.\n\nKey cues: Don\'t let your elbows flare out or drift forward. Keep your torso upright—don\'t lean over the bar. Only your forearms should move.\n\nRest 60 seconds, then repeat the superset.' },
+          { id: 'a6', name: 'Overhead Extension', sets: 3, reps: '12-15', rest: '60s', note: 'Myoreps if over 45 min', tip: 'Setup: Use a rope attachment on a cable machine or hold a single dumbbell with both hands. Stand or sit with arms extended overhead, elbows close to your ears.\n\nExecution: Keeping your upper arms stationary and close to your head, lower the weight behind your head by bending at the elbows. Feel a deep stretch in your triceps. Extend your arms back up, squeezing your triceps at the top.\n\nMyoreps option: If short on time, do 12-15 reps to near failure, take 3-5 deep breaths, do 3-5 more reps, breathe, repeat until you can\'t get at least 3 reps.\n\nKey cues: Keep your elbows pointed forward and close to your head throughout. Don\'t let them flare out. Control the weight—don\'t let it drop.' },
+        ]
+      },
+      B1: {
+        name: "LOWER + SHOULDERS",
+        subtitle: "Legs / Delts / Biceps",
+        variant: "Squat / Leg Curl",
+        exercises: [
+          { id: 'b1-squat', name: 'Barbell Squat', sets: 3, reps: '6-8', rest: '2 min', note: 'Primary leg variation', tip: 'Setup: Position the bar on your upper traps (high bar) or rear delts (low bar). Grip the bar just outside shoulder width. Step back and set feet shoulder-width apart or slightly wider, toes pointed out 15-30°.\n\nExecution: Take a deep breath and brace your core hard. Break at the hips and knees simultaneously, sitting down and back. Keep your chest up and knees tracking over your toes. Descend until your hip crease is at or below your knee (parallel or deeper). Drive through your whole foot to stand, exhaling at the top.\n\nKey cues: Keep your core braced throughout. Don\'t let your knees cave in. Maintain a neutral spine—no rounding your lower back. The bar should travel in a straight vertical line.' },
+          { id: 'b2', name: 'Cable Lateral Raise', sets: 4, reps: '15-20', rest: '60s', note: 'High reps for pump & width', tip: 'Setup: Set a cable pulley to the lowest position. Stand sideways to the machine and grab the handle with your outside hand (the hand farther from the machine). Stand tall with your working arm hanging in front of your body, cable crossing in front of you.\n\nExecution: With a slight bend in your elbow, raise your arm out to the side until it reaches shoulder height. Keep your palm facing down or slightly forward. Squeeze your side delt at the top. Lower with control.\n\nKey cues: Don\'t swing or use momentum—keep it controlled. Lead with your elbow, not your hand. Keep your torso still; don\'t lean away to cheat the weight up. Do all reps on one side, then switch.' },
+          { id: 'b3', name: 'Machine Preacher Curl', sets: 3, reps: '10-12', rest: '60s', note: 'Bicep isolation', tip: 'Setup: Adjust the seat so your armpits rest comfortably at the top of the pad. Your upper arms should be fully supported on the pad. Grip the handles with palms facing up.\n\nExecution: Start with arms fully extended (feel the stretch in your biceps). Curl the handles up toward your shoulders, squeezing your biceps hard at the top. Lower with control, taking 2-3 seconds to fully extend your arms again.\n\nKey cues: Keep your upper arms pressed against the pad throughout—don\'t let them lift off. Don\'t use momentum; the pad is there to isolate your biceps. Go all the way down for a full stretch on each rep.' },
+          { id: 'b4', name: 'Machine Shoulder Press', sets: 3, reps: '8-12', rest: '90s', note: 'Keep it heavy', tip: 'Setup: Adjust the seat so the handles are at shoulder height when seated. Sit with your back firmly against the pad. Grip the handles with palms facing forward.\n\nExecution: Press the handles straight up overhead, extending your arms without fully locking out your elbows. Lower with control until the handles are back at shoulder level or slightly below—feel a stretch in your delts.\n\nKey cues: Keep your back against the pad—don\'t arch excessively. Don\'t lock out your elbows at the top. Keep your core engaged throughout. This is your heavy pressing movement, so push yourself on the weight.' },
+          { id: 'b5-curl', name: 'Lying Leg Curl', sets: 3, reps: '10-12', rest: '90s', note: 'Secondary leg variation', tip: 'Setup: Lie face down on the leg curl machine. Adjust the pad so it sits just above your ankles, below your calves. Grip the handles and keep your hips pressed into the pad.\n\nExecution: Point your toes away from your shins (plantarflexion). Curl the weight up by contracting your hamstrings, bringing your heels toward your glutes. Squeeze hard at the top for a full second. Lower with control—take 2-3 seconds on the way down.\n\nKey cues: Don\'t let your hips rise off the pad. Keep tension on your hamstrings throughout—don\'t let the weight stack touch at the bottom. Focus on the mind-muscle connection with your hamstrings.' },
+          { id: 'b6', name: 'Machine Calf Raise', sets: 3, reps: '15-20', rest: '45s', note: 'Fast-paced finisher', tip: 'Setup: Position yourself in the calf raise machine with the pads on your shoulders. Place the balls of your feet on the platform, heels hanging off. Stand up to unrack the weight.\n\nExecution: Lower your heels as far as possible, getting a deep stretch in your calves. Press through the balls of your feet to raise your heels as high as possible. Squeeze hard at the top for a brief pause. Lower with control and repeat.\n\nKey cues: Full range of motion is key—deep stretch at the bottom, full contraction at the top. Don\'t bounce. Keep your knees slightly bent (not locked). Keep the pace brisk but controlled.' },
+        ]
+      },
+      B2: {
+        name: "LOWER + SHOULDERS",
+        subtitle: "Legs / Delts / Biceps",
+        variant: "RDL / Lunges",
+        exercises: [
+          { id: 'b1-rdl', name: 'Romanian Deadlift', sets: 3, reps: '6-8', rest: '2 min', note: 'Primary leg variation', tip: 'Setup: Stand with feet hip-width apart, holding a barbell with an overhand grip just outside your thighs. Start with the bar at hip level, shoulders back, chest up.\n\nExecution: With a slight bend in your knees (keep this angle fixed), push your hips back and hinge forward, lowering the bar along your thighs. Keep the bar close to your legs throughout. Go down until you feel a strong stretch in your hamstrings (usually around mid-shin). Drive your hips forward to stand back up, squeezing your glutes at the top.\n\nKey cues: Keep your back flat—never round your spine. The movement is a hip hinge, not a squat. Keep the bar close to your body. Think about pushing your hips back to a wall behind you.' },
+          { id: 'b2', name: 'Cable Lateral Raise', sets: 4, reps: '15-20', rest: '60s', note: 'High reps for pump & width', tip: 'Setup: Set a cable pulley to the lowest position. Stand sideways to the machine and grab the handle with your outside hand (the hand farther from the machine). Stand tall with your working arm hanging in front of your body, cable crossing in front of you.\n\nExecution: With a slight bend in your elbow, raise your arm out to the side until it reaches shoulder height. Keep your palm facing down or slightly forward. Squeeze your side delt at the top. Lower with control.\n\nKey cues: Don\'t swing or use momentum—keep it controlled. Lead with your elbow, not your hand. Keep your torso still; don\'t lean away to cheat the weight up. Do all reps on one side, then switch.' },
+          { id: 'b3', name: 'Machine Preacher Curl', sets: 3, reps: '10-12', rest: '60s', note: 'Bicep isolation', tip: 'Setup: Adjust the seat so your armpits rest comfortably at the top of the pad. Your upper arms should be fully supported on the pad. Grip the handles with palms facing up.\n\nExecution: Start with arms fully extended (feel the stretch in your biceps). Curl the handles up toward your shoulders, squeezing your biceps hard at the top. Lower with control, taking 2-3 seconds to fully extend your arms again.\n\nKey cues: Keep your upper arms pressed against the pad throughout—don\'t let them lift off. Don\'t use momentum; the pad is there to isolate your biceps. Go all the way down for a full stretch on each rep.' },
+          { id: 'b4', name: 'Machine Shoulder Press', sets: 3, reps: '8-12', rest: '90s', note: 'Keep it heavy', tip: 'Setup: Adjust the seat so the handles are at shoulder height when seated. Sit with your back firmly against the pad. Grip the handles with palms facing forward.\n\nExecution: Press the handles straight up overhead, extending your arms without fully locking out your elbows. Lower with control until the handles are back at shoulder level or slightly below—feel a stretch in your delts.\n\nKey cues: Keep your back against the pad—don\'t arch excessively. Don\'t lock out your elbows at the top. Keep your core engaged throughout. This is your heavy pressing movement, so push yourself on the weight.' },
+          { id: 'b5-lunge', name: 'Dumbbell Lunges', sets: 3, reps: '10-12 each leg', rest: '90s', note: 'Secondary leg variation', tip: 'Setup: Stand holding a dumbbell in each hand at your sides. Feet should be hip-width apart, chest up, shoulders back.\n\nExecution: Step forward with one leg, lowering your hips until both knees are bent at about 90°. Your front knee should stay over your ankle (not past your toes), and your back knee should hover just above the ground. Push through your front heel to return to standing. Alternate legs or do all reps on one side, then switch.\n\nKey cues: Keep your torso upright throughout—don\'t lean forward. Take a long enough step that you can keep your front shin vertical. Control the descent; don\'t let your back knee slam into the ground. Keep your core tight for balance.' },
+          { id: 'b6', name: 'Machine Calf Raise', sets: 3, reps: '15-20', rest: '45s', note: 'Fast-paced finisher', tip: 'Setup: Position yourself in the calf raise machine with the pads on your shoulders. Place the balls of your feet on the platform, heels hanging off. Stand up to unrack the weight.\n\nExecution: Lower your heels as far as possible, getting a deep stretch in your calves. Press through the balls of your feet to raise your heels as high as possible. Squeeze hard at the top for a brief pause. Lower with control and repeat.\n\nKey cues: Full range of motion is key—deep stretch at the bottom, full contraction at the top. Don\'t bounce. Keep your knees slightly bent (not locked). Keep the pace brisk but controlled.' },
+        ]
+      }
+    };
+
+    const workoutRotation = ['A', 'B1', 'A', 'B2'];
+
+    const techniques = [
+      {
+        name: 'Rest-Pause (RP)',
+        description: 'A technique to extend a set beyond failure. Perform reps until you can\'t do another with good form, rest 10-15 seconds (keep holding the weight or stay in position), then do as many more reps as possible.',
+        example: 'If you get 8 reps, rest 10-15 sec, then get 3 more reps, you did "8 + 1 RP" for 11 total reps.'
+      },
+      {
+        name: 'Myoreps',
+        description: 'A time-efficient technique for isolation exercises. Do an activation set to near failure (12-15 reps), then take 3-5 deep breaths and do 3-5 more reps. Repeat until you can\'t get at least 3 reps.',
+        example: 'Overhead extension: 15 reps → breathe → 5 reps → breathe → 4 reps → breathe → 3 reps. Done in ~90 seconds.'
+      },
+      {
+        name: 'Superset',
+        description: 'Two exercises performed back-to-back with no rest between them. Rest only after completing both exercises.',
+        example: 'Pec Deck (15 reps) → immediately → Rear Delt Fly (15 reps) → rest 60s → repeat.'
+      }
+    ];
+
+    const progressionTips = [
+      'Add weight when you hit the top of the rep range for all sets',
+      'Increase by 5 lbs for upper body, 10 lbs for lower body',
+      'If you can\'t complete minimum reps, drop weight slightly',
+      'Your previous weights show in blue as a reference'
+    ];
+
+    // State
+    let currentRotationIndex = 0;
+    let sessionLog = {};
+    let history = [];
+
+    // Initialize
+    function init() {
+      loadData();
+      renderWorkoutTabs();
+      renderWorkout();
+      renderTechniquesModal();
+      setupEventListeners();
+    }
+
+    function loadData() {
+      try {
+        const savedHistory = localStorage.getItem('workoutHistory_v2');
+        const savedSession = localStorage.getItem('currentSession_v2');
+        if (savedHistory) history = JSON.parse(savedHistory);
+        if (savedSession) {
+          const session = JSON.parse(savedSession);
+          sessionLog = session.log || {};
+          currentRotationIndex = session.rotationIndex ?? 0;
+        }
+      } catch (e) {}
+    }
+
+    function saveSession() {
+      try {
+        localStorage.setItem('currentSession_v2', JSON.stringify({ rotationIndex: currentRotationIndex, log: sessionLog }));
+      } catch (e) {}
+    }
+
+    function saveHistory() {
+      try {
+        localStorage.setItem('workoutHistory_v2', JSON.stringify(history));
+      } catch (e) {}
+    }
+
+    // Render functions
+    function renderWorkoutTabs() {
+      const container = document.getElementById('workoutTabs');
+      container.innerHTML = workoutRotation.map((w, index) => 
+        `<button class="workout-tab ${index === currentRotationIndex ? 'active' : ''}" data-index="${index}">${w}</button>`
+      ).join('');
+    }
+
+    function renderWorkout() {
+      const currentWorkout = workoutRotation[currentRotationIndex];
+      const workout = workoutData[currentWorkout];
+      
+      // Update info
+      document.getElementById('workoutInfo').innerHTML = `
+        <h2>${workout.name}</h2>
+        <p class="subtitle">${workout.subtitle}</p>
+        <p class="variant">${workout.variant}</p>
+      `;
+      
+      // Update exercises
+      const exercisesHtml = workout.exercises.map(ex => renderExerciseCard(ex)).join('');
+      document.getElementById('exercisesList').innerHTML = exercisesHtml;
+      
+      // Update progress
+      updateProgress();
+      
+      // Update tabs
+      document.querySelectorAll('.workout-tab').forEach((tab, index) => {
+        tab.classList.toggle('active', index === currentRotationIndex);
+      });
+    }
+
+    function renderExerciseCard(exercise) {
+      const logData = sessionLog[exercise.id] || {};
+      const previousData = getPreviousData(exercise.id);
+      
+      let completedSets = 0;
+      for (let i = 0; i < exercise.sets; i++) {
+        if (logData[i]?.weight && logData[i]?.reps) completedSets++;
+      }
+      
+      const setsHtml = [];
+      for (let i = 0; i < exercise.sets; i++) {
+        const setData = logData[i] || {};
+        const prevData = previousData?.[i] || {};
+        const isComplete = setData.weight && setData.reps;
+        
+        setsHtml.push(`
+          <div class="set-row">
+            <div class="set-number ${isComplete ? 'complete' : ''}">${i + 1}</div>
+            <input type="text" inputmode="decimal" class="set-input ${prevData.weight ? 'has-previous' : ''}" 
+              data-exercise="${exercise.id}" data-set="${i}" data-field="weight"
+              value="${setData.weight || ''}" placeholder="${prevData.weight || 'lbs'}">
+            <input type="text" inputmode="decimal" class="set-input ${prevData.reps ? 'has-previous' : ''}"
+              data-exercise="${exercise.id}" data-set="${i}" data-field="reps"
+              value="${setData.reps || ''}" placeholder="${prevData.reps || 'reps'}">
+          </div>
+        `);
+      }
+      
+      return `
+        <div class="exercise-card">
+          <div class="exercise-header">
+            <div>
+              <div class="exercise-title-row">
+                <span class="exercise-name">${exercise.name}</span>
+                <button class="tip-btn" data-exercise-id="${exercise.id}">?</button>
+              </div>
+              <p class="exercise-sets-reps">${exercise.sets} × ${exercise.reps}</p>
+            </div>
+            <div class="exercise-meta">
+              <p class="exercise-rest">Rest: ${exercise.rest}</p>
+              <span class="exercise-progress ${completedSets === exercise.sets ? 'complete' : ''}">${completedSets}/${exercise.sets}</span>
+            </div>
+          </div>
+          ${exercise.note ? `<p class="exercise-note">💡 ${exercise.note}</p>` : ''}
+          ${previousData && Object.keys(previousData).length > 0 ? '<p class="previous-note">📊 Last time shown in blue</p>' : ''}
+          <div class="sets-header">
+            <span></span>
+            <span>Weight</span>
+            <span>Reps</span>
+          </div>
+          ${setsHtml.join('')}
+        </div>
+      `;
+    }
+
+    function updateProgress() {
+      const currentWorkout = workoutRotation[currentRotationIndex];
+      const workout = workoutData[currentWorkout];
+      let totalSets = 0;
+      let completedSets = 0;
+      
+      workout.exercises.forEach(ex => {
+        totalSets += ex.sets;
+        const exLog = sessionLog[ex.id] || {};
+        for (let i = 0; i < ex.sets; i++) {
+          if (exLog[i]?.weight && exLog[i]?.reps) completedSets++;
+        }
+      });
+      
+      const progress = totalSets > 0 ? Math.round((completedSets / totalSets) * 100) : 0;
+      document.getElementById('progressBar').style.width = `${progress}%`;
+      document.getElementById('progressText').textContent = `${completedSets} / ${totalSets} sets`;
+    }
+
+    function getPreviousData(exerciseId) {
+      for (const entry of history) {
+        if (entry.exercises[exerciseId]) return entry.exercises[exerciseId];
+      }
+      return null;
+    }
+
+    function renderTechniquesModal() {
+      const html = techniques.map(tech => `
+        <div class="technique-card">
+          <h3>${tech.name}</h3>
+          <p>${tech.description}</p>
+          <div class="technique-example">
+            <p class="label">Example:</p>
+            <p>${tech.example}</p>
+          </div>
+        </div>
+      `).join('') + `
+        <div class="progression-card">
+          <h3>Progressive Overload Tips</h3>
+          <ul>
+            ${progressionTips.map(tip => `<li>${tip}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+      document.getElementById('techniquesModalBody').innerHTML = html;
+    }
+
+    function renderHistoryModal() {
+      if (history.length === 0) {
+        document.getElementById('historyModalBody').innerHTML = '<p class="history-empty">No completed workouts yet. Get after it! 💪</p>';
+        return;
+      }
+      
+      const html = history.map(entry => {
+        const workout = workoutData[entry.workout];
+        const exercisesHtml = Object.entries(entry.exercises).map(([exId, sets]) => {
+          const exercise = workout?.exercises.find(e => e.id === exId);
+          const setEntries = Object.entries(sets).filter(([_, s]) => s.weight && s.reps);
+          if (setEntries.length === 0) return '';
+          
+          return `
+            <div class="history-exercise">
+              <div class="history-exercise-header">
+                <span class="history-exercise-name">${exercise?.name || exId}</span>
+                <span class="history-exercise-sets">${setEntries.length} sets ✓</span>
+              </div>
+              <div class="history-exercise-data">${setEntries.map(([_, s]) => `${s.weight}×${s.reps}`).join(', ')}</div>
+            </div>
+          `;
+        }).join('');
+        
+        const date = new Date(entry.date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+        
+        return `
+          <div class="history-entry">
+            <div class="history-header">
+              <span class="history-workout">Workout ${entry.workout}</span>
+              <span class="history-date">${date}</span>
+            </div>
+            <p class="history-variant">${workout?.variant || ''}</p>
+            ${exercisesHtml}
+          </div>
+        `;
+      }).join('');
+      
+      document.getElementById('historyModalBody').innerHTML = html;
+    }
+
+    // Event handlers
+    function setupEventListeners() {
+      // Workout tabs
+      document.getElementById('workoutTabs').addEventListener('click', (e) => {
+        if (e.target.classList.contains('workout-tab')) {
+          currentRotationIndex = parseInt(e.target.dataset.index);
+          saveSession();
+          renderWorkout();
+        }
+      });
+      
+      // Exercise inputs
+      document.getElementById('exercisesList').addEventListener('input', (e) => {
+        if (e.target.classList.contains('set-input')) {
+          const { exercise, set, field } = e.target.dataset;
+          if (!sessionLog[exercise]) sessionLog[exercise] = {};
+          if (!sessionLog[exercise][set]) sessionLog[exercise][set] = {};
+          sessionLog[exercise][set][field] = e.target.value;
+          saveSession();
+          updateProgress();
+          
+          // Update set number styling
+          const row = e.target.closest('.set-row');
+          const setNumber = row.querySelector('.set-number');
+          const inputs = row.querySelectorAll('.set-input');
+          const isComplete = inputs[0].value && inputs[1].value;
+          setNumber.classList.toggle('complete', isComplete);
+          
+          // Update exercise progress
+          const card = e.target.closest('.exercise-card');
+          const exerciseId = e.target.dataset.exercise;
+          const currentWorkout = workoutRotation[currentRotationIndex];
+          const exerciseData = workoutData[currentWorkout].exercises.find(ex => ex.id === exerciseId);
+          const logData = sessionLog[exerciseId] || {};
+          let completedSets = 0;
+          for (let i = 0; i < exerciseData.sets; i++) {
+            if (logData[i]?.weight && logData[i]?.reps) completedSets++;
+          }
+          const progressEl = card.querySelector('.exercise-progress');
+          progressEl.textContent = `${completedSets}/${exerciseData.sets}`;
+          progressEl.classList.toggle('complete', completedSets === exerciseData.sets);
+        }
+      });
+      
+      // Tip buttons
+      document.getElementById('exercisesList').addEventListener('click', (e) => {
+        const tipBtn = e.target.closest('.tip-btn');
+        if (tipBtn) {
+          const exerciseId = tipBtn.dataset.exerciseId;
+          const currentWorkout = workoutRotation[currentRotationIndex];
+          const exercise = workoutData[currentWorkout].exercises.find(ex => ex.id === exerciseId);
+          if (exercise) {
+            document.getElementById('tipModalTitle').textContent = exercise.name;
+            document.getElementById('tipModalBody').innerHTML = `
+              <p class="tip-meta">${exercise.sets} × ${exercise.reps} | Rest: ${exercise.rest}</p>
+              <div class="tip-content">
+                <h3>How to perform:</h3>
+                <p>${exercise.tip}</p>
+              </div>
+            `;
+            openModal('tipModal');
+          }
+        }
+      });
+      
+      // Tips button
+      document.getElementById('tipsBtn').addEventListener('click', () => openModal('techniquesModal'));
+      
+      // History button
+      document.getElementById('historyBtn').addEventListener('click', () => {
+        renderHistoryModal();
+        openModal('historyModal');
+      });
+      
+      // Clear button
+      document.getElementById('clearBtn').addEventListener('click', () => {
+        if (confirm('Clear current workout log?')) {
+          sessionLog = {};
+          saveSession();
+          renderWorkout();
+        }
+      });
+      
+      // Finish button
+      document.getElementById('finishBtn').addEventListener('click', () => {
+        if (Object.keys(sessionLog).length === 0) {
+          alert('Log at least one set before finishing!');
+          return;
+        }
+        
+        const currentWorkout = workoutRotation[currentRotationIndex];
+        const newEntry = { date: new Date().toISOString(), workout: currentWorkout, exercises: sessionLog };
+        history = [newEntry, ...history].slice(0, 100);
+        saveHistory();
+        
+        sessionLog = {};
+        try { localStorage.removeItem('currentSession_v2'); } catch (e) {}
+        
+        const nextIndex = (currentRotationIndex + 1) % workoutRotation.length;
+        const nextWorkout = workoutRotation[nextIndex];
+        currentRotationIndex = nextIndex;
+        saveSession();
+        renderWorkout();
+        
+        alert(`Workout saved! 💪\nNext up: ${nextWorkout} (${workoutData[nextWorkout].variant})`);
+      });
+      
+      // Modal close buttons
+      ['tipModal', 'techniquesModal', 'historyModal'].forEach(modalId => {
+        const modal = document.getElementById(modalId);
+        modal.querySelector('.modal-close').addEventListener('click', () => closeModal(modalId));
+        modal.querySelector('.modal-footer button').addEventListener('click', () => closeModal(modalId));
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal(modalId);
+        });
+      });
+    }
+
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Start the app
+    init();
+  </script>
+</body>
+</html>
